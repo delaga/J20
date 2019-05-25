@@ -44,6 +44,7 @@ select * from sticenik;
 select * from prostor;
 select * from dogadjaj;
 
-alter table sticenik add column zadnja_promjena datetime NOT NULL DEFAULT CURRENT_TIMESTAMP;
-
-
+alter table sticenik add column zadnja_promjena datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+select * from sticenik;
+update sticenik set vrsta='pas' where id=1;
+select * from sticenik;
