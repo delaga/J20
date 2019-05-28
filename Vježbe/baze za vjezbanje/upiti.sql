@@ -35,6 +35,5 @@ select grupa from clan;
 select distinct grupa from clan;
 select * from grupa where sifra not in(select distinct grupa from clan);
 
+select * from batch_users_queue where prezime like 'Dela%';
 
-
-kekspay
