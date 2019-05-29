@@ -33,25 +33,6 @@ inner join izdavac c on a.izdavac=c.sifra
 inner join mjesto d on a.mjesto=d.sifra
 where /*a.naslov like '%ljubav%' and*/ a.sifra in(2660,2664,2879,2938);
 
-select a.naslov
-from katalog a
-inner join autor b on a.autor=b.sifra
-where b.datumrodenja between '1980-01-01' and '1980-12-31';
-
-select a.`productName`
-from products a 
-inner join productlines b on a.`productLine`=b.`productLine` where b.`productLine`='Trains';
-
-select distinct concat(a.`contactFirstName`,' ', a.`contactLastName`) as korisnik, d.`productName` as 'je kupio', b.`orderDate` as dana
-from customers a 
-inner join orders b on a.`customerNumber`=b.`customerNumber`
-inner join orderdetails c on b.`orderNumber`=c.`orderNumber`
-inner join products d on c.`productCode`=d.`productCode`
-inner join productlines e on d.`productLine`=e.`productLine`
-where e.`productLine`='Trains';
-
-
-
 
 
 
