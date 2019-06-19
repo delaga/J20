@@ -1,10 +1,16 @@
-<?php
-
-echo "Hello"," ";
-print "Pero";
-
-echo 'tekst ';
-echo "Dvostruki \n";
-echo 'ovo je pod jednostrukima\n';
-
-echo 'kako jednostruki \'\n';
+<hr/>
+<ol>
+    <li>
+<a href="varijable.php">Varijable</a>
+    </li>
+    <li>
+<a href="korisneFunkcije.php">Korisne funkcije</a>
+    </li>
+    <li>
+<a href="nizovi.php">nizovi</a>
+    </li>
+    <li>
+<a href="operatori.php">Oper</a>
+    </li>
+</ol>
+Ostalo pogledati u projekt
