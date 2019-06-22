@@ -1,0 +1,126 @@
+﻿Dobrovoljno vatrogasno društvo Branjin Vrh
+Dobrovoljno vatrogasno društvo Branjin Vrh je malo vatrogasno društvo u srcu Baranje koje djeluje već 117 godina. Kako društvo trenutno nema svoju web stranicu, putem ovog projekta bih napravila web stranicu dobrovoljnog vatrogasnog društva. Na toj bi stranici krajnji korisnici (posjetitelji) mogli pratiti sva događanja, čitati vijesti vezane za ovo, ali i druga dobrovoljna vatrogasna društva u Baranji i šire. Korisnici bi mogli kontaktirati društvo pomoću mail adrese, odnosno obrasca koji se šalje na mail adresu te se upisati u vatrogasno društvo putem prijavnice dostupne na web adresi. S druge strane poslužitelji informacija mogu vrlo jednostavno najavljivati događanja, objavljivati vijesti, postaviti fotografije i slično. 
+
+
+Zbirka matičnih knjiga DAOS
+Zbirka matičnih knjiga Državnog arhiva u Osijeku trenutno broji skoro 1400 matičnih knjiga rođenih, vjenčanih i umrlih rimokatoličke, pravoslavne, židovske te drugih vjeroispovijesti iz razdoblja od 1686. do 1900. godine s područja Osječko-baranjske, Virovitičko-podravske i Vukovarsko-srijemske županije. Pravo na korištenje arhivskog gradiva prema Pravilniku o korištenju arhivskog gradiva imaju svi korisnici pod jednakim uvjetima. Međutim, javno gradivo koje se odnosi na osobne podatke, kao što su matične knjige, dostupno je za korištenje 70 godina nakon svog nastanka, odnosno 100 godina od rođenja osobe na koju se odnosi. No, kao i sve ostalo arhivsko gradivo koje se čuva u arhivskim ustanovama na korištenje se daje isključivo u arhivskim čitaonicama gdje korisnik podnosi pisani zahtjev na posebnom obrascu. Ovim projektom cilj je korisnicima omogućiti pregled i rezervaciju arhivskog gradiva te time znatnije vremenski skratiti postupak rješavanja zahtjeva korisnika i dostupnosti gradiva.
+
+
+Dječji vrtić "Crvenkapica" 
+Dječji vrtić "Crvenkapica" jedini vrtić u najistočnijem gradu u Hrvatskoj, u Iloku, otvoren je davne 1889. godine i kroz njega su prošle brojne generacije djece. Nažalost, zbog nedostatka financija, vrtić nije u mogućnosti priuštiti si web stranicu, te sam odlučila ovaj projekt napraviti za njih. S obzirom kako puno roditelja danas radi i nemaju kamo ostaviti dijete, vrtić je odlično mjesto za njih. Putem ove stranice, roditelji će svoje dijete moći upisati u vrtić putem "Prijava" te tako stalno biti u toku događaja. Osim događaja, na stranici će se nalaziti osnovne informacije o vrtiću, popisi i opisi odgojnih skupina, razne galerija s događaja te kontakt.
+
+
+Koncertna mreža
+Koncertna mreža je projekt koji svojim korisnicima omogućuje i pruža najnovije informacije vezane za glazbena događanja i koncerte na državnoj, ali za one koje žele više, i na međunarodnoj razini. S jedne strane korisnici mogu saznati kada, gdje, kako i po kojoj cijeni mogu otići na željeni koncert, te putem svog korisničkog računa  rezervirati svoje karte na vrijeme. Također, prednost je što mogu upoznati i druge ljude sličnih interesa te se s njima dogovarati oko prijevoza i slično. Poslužitelj će s druge strane izvještavati o prošlim događanjima te postaviti fotografije kako bi onima koji nisu prisustvo
+
+
+Acoustic duo Baby Blue
+Acoustic duo Baby Blue je mladi osječki glazbeni dvojac koji čine Ines Stjepanović (vokal) i Doris Despot (gitara). Upoznale su se u srednjoj školi, kada su odlučile osnovati  Baby Blue, acoustic duo koji posljednjih 6 godina djeluje u Osijeku i okolici i svojim kvalitetnim repertoarom osigurava dobru atmosferu svakome tko ih dođe poslušati. S obzirom na to da postoji sve veća zainteresiranost za njihove nastupe, odlučila sam napraviti web stranicu koja bi omogućila svim krajnjim korisnicima jednostavno praćenje  novosti i događanja vezanih uz ovaj acoustic duo. Također, korisnici bi imali mogućnost slanja svojih glazbenih želja, pohvala ili kritika, kao i mogućnost pregleda galerija, datuma koncerata te pristup svim potrebnim kontakt podacima.
+
+
+Aukcijska kuća "Cauliflower"
+Aukcijska kuća Cauliflower je projekt koji će omogućiti svim ljubiteljima likovne umjetnosti da lakše nabave različite umjetnine iz cijeloga svijeta. Osnovna djelatnost aukcijske kuće Cauliflower je priređivanje i vođenje javnih aukcija umjetnina i antikviteta. Cilj ovom projektu je kupcima i prodavačima pružiti sve potrebne informacije koje su im potrebne za nabavu ili prodaju slikarskih, skulptorskih i grafičkih djela. Omogućiti će se pregledavanje i pretraživanje umjetničkih djela koji su na prodaji ili tek trebaju biti ponuđeni za prodaju.  Kupci i prodavači moći će lakše komunicirati, direktno ili preko posrednika. Projekt nije namijenjen samo za kupnju i prodaju umjetnina već i za edukaciju o autorima, umjetničkim djelima i povijesti umjetnosti.
+
+
+Comical Horror Story
+Budući da sam nedavno počeo raditi svoju videoigru, odlučio sam napraviti i website. Na stranicama će se moći pronaći sve informacije vezane za igru i napredak, pregledavati slike, itd. Korisnici će se moći registrirati/prijaviti, te ostavljati svoje komentare i mišljenja. 
+
+
+ŽOK Vitez '11
+Vitez '11 odbojkaški je klub iz Antunovca, mjesta nedaleko od Osijeka. Osnovan je 2011. godine i od tada sudjeluje u 3. Slavonskoj odbojkaškoj ligi. Kao igračica ŽOK Vitez-a, ovom bi prilikom napravila mrežno mjesto kluba, koje će sadržavati podatke o klubu, trenerima i igračicama. Stranica će redovno prikazivati nadolazeće utakmice, vijesti o prijašnjim utakmicama te će sadržavati profile svake igračice u klubu. Igračice kluba moći će se prijavljivati na stranicu preko koje će biti u mogućnosti komentirati vijesti, uređivati svoje profile i same sudjelovati u ažuriranju stranice. Ostali korisnici mogu posjećivati stranicu kao gosti te komentirati vijesti uz željeni nadimak. Stranica privlači sponzore za klub, više gledatelja te na kraju, podići značaj kluba na novu razinu.
+
+
+E-LEKTIRNI KATALOG
+E-L-K je katalog koji će srednjoškolcima olakšati čitanje književnih djela za lektiru u online obliku. Svaki srednjoškolac srednje škole koja se odluči za ovu aplikaciju imat će priliku registrirati se u sustav i slobodno pretraživati jedinice. Posebnost ovoga online kataloga je u tome što će se tamo doista nalaziti sva građa koja je potrebna srednjoškolcima za vrijeme srednje škole, ali i u vrijeme pripreme mature uz mnoge priručnike. Osim informacija o cilju ovakvoga kataloga na naslovnici ćete moći pronaći sve zanimljivosti vezane uz olakšavanje interpretacije djela. Katalog će biti koncipiran po principu uobičajnih kataloga za pretraživanje u kojem ćete moći pronaći sve primarne informacije(naslov, autor, mjesto, izdavač,ali i korisnici) o djelu, ali i link na tekst djela.
+
+
+ManChestHair
+ManChestHair je radni naziv stranice koja spaja mlade, neiskusne i rada željne ljude s drugim, iskusnijim i (možda) ponešto starijim ljudima kojima je potrebna pomoć za nekakav rad. Stranica se bazira na principima 'supply and demand', volontiranja, i međuljudske solidarnosti i društvenog integriteta. Ono što stranica pruža je mjesto susreta onih koji trebaju pomoć pri radu kroz neki vremenski period (ljude sa ili bez posebnih vještina) i onih koji traže produbiti ili steći novo znanje i iskustvo u svojem polju interesa. Svi uvjeti ponude biti će ispisani na stranici svim posjetiteljima, dok će samo registrirani korisnici moći objavljivati ponude. Kako bi se izdvojili kvalitetniji korisnici od onih manje kvalitetnih, biti će implementirana 'karma,' sustav pozitivnog i negativnog rejtinga od strane korisnika. P.S. – referenca na trenutno ime stranice: http://tinyurl.com/or788ft, jer nisam znao koji naziv da stavim, ali bitno je imati ideju za sada.
+
+
+Rap's Finest
+RAP'S FINEST - je projekt odnosno pokret koji pokreće mladu rep scenu te otkriva nove talente ali i promovira već poznate izvođače. Web aplikacija omogućuje praćenje autora, njihovih albuma, solo pjesama, koncerata, gledanje slika i video klipova, ocjenjivanje i komentiranje sadržaja. Aplikacija omogućije i download besplatnog sadržaja koji je vezan uz rep ili njemu sličan žanr. Rap's Finest daje najnovije vijesti koje promoviraju mlade (i one koji se tako osjećaju:) repere te im pružiti priliku da ih šira publika čuje. Samim time će kroz aplikaciju imate sve potrebne kontakt podatke samih autora bez posrednika radi promicanja rep kulture.
+
+
+Vet DataBase App
+Vet DataBase App (VDBA) projekt je osmišljen tijekom razgovora s jednim veterinarom kao web aplikacija koja omogućuje veterinarima sustavno i lakše praćenje njihovog cjelokupnog rada. Veterinar u bazi povezuje životinju s vlasnikom, koji joj je tretman i kada priuštio, koje cjepivo je dao (ako ga je dao) te kada je zakazan idući termin ukoliko je ukazana potreba za istim. Isto tako može vidjeti i o kojoj se vrsti, kao i pasmini životinje radi, koliko je stara, je li čipirana i slične podatke. 
+
+
+BabyRhythm
+Dolazak bebe u dom je jedan predivan životni događaj, ali isto tako i stresan. Naš stil života se mijenja i sve se počinje vrtiti oko tog malenog bića, kojemu je potrebna sva pažnja i to 24 sata dnevno. Moja aplikacija pomaže mladim majkama, a i već  iskusnim, pratiti ritam njihove bebe. Majke mogu pomoću te aplikacije zapisivati sve dnevne aktivnosti svoje bebe, kao što je vrijeme kada je beba jela, pila, spavala... Također mogu u kalendar zabilježiti kada je njihova beba prvi put držala glavicu uspravno, kada je prvi put samostalno sjedila, kada je prohodala... Postoji zdrastveni kutak gdje majke vode evidenciju pojave zubića, cijepljenja, odlazaka kod doktora i slično.
+
+
+Premier liga
+Premier liga je projekt koji će svim ljubiteljima nogometa omogućiti praćenje najnovijih vijesti vezanih za utakmice, njihove najdraže igrače te plasman klubova na ljestvici. Premier liga, često zvana i Premiership, je engleska  profesionalna nogometna liga koja predstavlja najviši rang u engleskom nogometnom sustavu liga. U ligi se natječe dvadeset klubova, a stranica će sadržavati podatke o svakom klubu, njihovim igračima, trenerima i slično. Putem ovog projekta korisnici će moći saznati kada i gdje se igraju utakmice, kolika je cijena ulaznica i ukoliko žele, rezervirati te ulaznice. Isto tako, korisnici će imati mogućnost kladiti se na određene utakmice te sudjelovati u nagradnim igrama.
+
+
+Booking Visit Baranja
+Booking Visit Baranja projekt je za novootvorenu turističku agenciju Ide-Oda koja se nalazi u Baranji. Služi za unapređivanje turizma istog područja. Korisnicima omogućava da putem interneta rezerviraju smještaj ili atrakcije koje će im biti dostupne. Projekt je osnovan na tome da preko bookinga omogući korisnicima lakši i jednostavniji pregled i dostupnost. Kada se korisnik odluči za destinaciju potrebno je registrirati se kako bi se mogla izvršiti uplata u iznosu od 10% koja bi se proslijedila na račun turističke agencije, a ostatak se plaća u odabranom objektu  ili trenutna uplata cjelokupnog iznosa koja se tada raspoređuje na turističku agenciju (10%)  i na vlasnike objekata (90%). Ukoliko bude potrebno otkazivanje ono se može izvršiti 10 dana prije polaska.
+
+
+Lost in Vinyls
+Lost in Vinyls je projekt koji omogućava vlasnicima gramofonskih ploča međusobno povezivanje, razmjenu, prodaju svojih i kupnju ploča drugih korisnika. Gramofonske ploče imaju jako malo prilika za obznaniti svijetu svoje postojanje (primjer su različiti sajmovi koji se, nažalost, ne organiziraju veoma često) i u tim razmacima one nemaju puno mogućnosti. Korisnici bi napravili svoj korisnički račun preko kojega bi postavljali svoje ploče koje žele prodati, kao i popis želja koje bi ploče htjeli nabaviti, ne bi li ih drugi korisnici mogli kontaktirati u slučaju posjedovanja istih. Pretraživanje baze, dostupne informacije i zvučni primjeri olakšat će cijeli postupak obožavateljima gramofonskih ploča i učiniti njihove ploče i one koje traže vidljivima u svakom trenutku.
+
+
+Catering Brzo&Fino
+Stranica je osmišljena na način da prikazuje korisnicima cjelokupnu ponudu, a oni izabiru ono što žele te putem mail adrese naručuju i odabiru za kakvu prigodu je catering namijenjen. Svi korisnici mogu naručivati, ali samo oni koji se registriraju mogu ostavljati komentare i pisati iskustva, a također i dobivati popuste. Svi ostali korisnici mogu ocijeniti uslugu rating zvjezdicama ili putem kratke ankete koja će se nalaziti na stranici. Na stranici će se osim ponude nalaziti i informacije o opremljenosti, kontakt podaci, obrazac pomoću kojega korisnici naručuju ono što odaberu te galerija fotografija kako bi korisnici mogli pogledati kako će izgledati njihova narudžba.
+
+
+AdoptAnimalsApp
+AdoptAnimalsApp je stranica koja pruža informacije o životinjama koje se nalaze u azilu i koje se mogu udomiti. Svim korisnicima će biti dostupne informacije o vrsti životinje, starosti, zdravlju, navikama, njihovim osobinama i sl. Korisnici će imati 'Sviđa mi se' opciju  uz opis i sliku životinje koja im se sviđa ili koju žele udomiti, ali samo ukoliko se prijave na stranicu sa svojim podacima. Isti će moći i putem e-maila saznati više o pojedinoj životinji te se odlučiti žele li ju udomiti. Korisnici koji udome neku od životinja moći će komentirati i napisati svoja iskustva s udomljenom  životinjom. Osim informacija o životinjama na stranici će se nalaziti i informacije o nastanku i opremljenosti azila.
+
+
+KAVISSIMO
+Kavissimo je projekt koji će svim ljubiteljima kave i odlazaka na iste omogućiti prikaz svih kafića u njihovoj blizini. Korisnici će moći stranicu pretraživati u search baru prema taggovima, tj. imenima kafića, lokaciji, dodatnim pogodnostima (kuponi za kavu, stol za biljar, popusti itd.). Također, uz odobrenje administratora stranice, kafići će moći sami popunjavati prijavne obrasce za uvrštavanje njihovog obrta u popis. Svaki kafić će imati svoju stranicu sa podatcima kao što su : naziv, lokacija, kontakt, dodatne pogodnosti, vrste kave koje poslužuju, fotografija cjenika, ime i prezime vlasnika, omogućena pratnja kućnih ljubimaca, wifi... Uz to, korisnici će biti u mogućnosti ostaviti recenziju na stranici kafića te ga ocijeniti na skali od 5 zvjezdica.
+
+
+Business Startup
+Svi znamo koliko ponekad može biti teško stvoriti nešto iz ničega, a u takvim je situacijama svaka pomoć i više nego dobrodošla. Business Startup je web stranica namijenjena mladim poduzetnicima i onima koji to tek namjeravaju postati. Na ovu bi se stranicu potencijalni novi ulagači i investitori mogli besplatno registrirati te primati najnovije informacije s ekonomskog tržišta. Također, stranica bi ih usmjeravala i pružala potrebne ažurne podatke o poslovnom sektoru u kojem bi se željeli okušati. Osim toga, ponuđene su im usluge kao što su besplatni predlošci za prikladne poslovne posjetnice te informacije o aktualnim tečajevima za usavršavanje u područjima poslovne komunikacije.
+
+
+Pannonian Challenge
+Pannonian Challenge je natjecanje u ekstremnim sportovima i glazbeni festival koji se održava svake godine u kolovozu u osječkom Skate parku. Sponzoriran je od strane Red Bulla, Nokie, Vipa, grada Osijeka i dr. Započet je 2000. godine, vrlo je posjećen, a na njemu se natječu brojni, svjetski poznati, vozači skatea, BMX-a i in-linea. S obzirom na to da sam višegodišnji volonter na PC-u i volim ekstremne sportove, odlučio sam napraviti mrežnu aplikaciju na tu temu. Ona pruža korisnicima uvid u povijest Pannoniana, organizaciju i najistaknutije natjecatelje. Korisnici mogu pogledati i galeriju slika te imaju i pristup kontakt podacima same organizacije Pannoniana. Uz to, korisnici se prijavljuju kao natjecatelji ili volonteri.
+
+
+SKUD 'Sveti Sava' Tenja
+SKUD 'Sveti Sava' Tenja, je srpsko kulturno umjetničko društvo iz Tenje. Osnovano je 2007. godine s ciljem očuvanja kulture i tradicije Srba na prostoru Slavonije. Kako je drušvo relativno mlado, a još uvijek nema svoju stranicu, kao aktivan član i voditelj najmlađe dječije grupe folklora, ovim projektom sam odlučila napraviti mrežno mjesto KUD-u. Stranica bi sadržavala popise članova po grupama, kontakt, galeriju slika, te obavijesti o nadolazećim nastupima i projektima.
+
+
+Online knjižara Bubamara
+Online knjižara Bubamara je stranica koja korisnicima omogućuje pretraživanje i naručivanje artikala koji su u ponudi knjižare. U ponudi knjižare nalaze se knjige i glazbeni CD-i. Korisnici će moći pretraživati artikle prema nazivu, autoru, izdavaču i sl. Ukoliko se artikl nalazi u ponudi biti će prikazane sve informacije o tom artiklu kao što su autor, godina izdavanja, izdavač i itd. , a ukoliko se artikl ne nalazi u ponudi korisnik će biti o tome obaviješten. Registrirani korisnici mogu naručiti pojedini artikl te ostaviti komentare, primjedbe i ostalo. Osim ponude artikala stranica sadržava i podatke o samoj knjižari, kontakt podatke i najnovije informacije.
+
+
+Voodoo
+Voodoo je web projekt kojemu je cilj promovirati jedan od istoimenih Osječkih kafića. Osim same promocije, istaknut će se i njegovo nastojanje da proširi alternativnu kulturu te zanimljive sadržaje većem broju korisnika. Korisnici će na stranici moći pronaći sve podatke vezane uz izložbe, svirke i kvizove koji se održavaju u prostorima kafića. Također će moći komentirati događaje, davati prijedloge za nadolazeća događanja te se prijavljivati za izložbu, svirku ili kviz ili samo komentirati fotografije u galeriji. Sve navedeno bit će im omogućeno putem vlastitih profila pomoću kojih će se i pratiti koji su najaktivniji gosti te ih se i nagraditi pićem po izboru.
+
+
+Knjižnica Osnovne škole Vođinci
+Osnovana je i  postoji koliko i  sama škola u  malom selu pokraj Vinkovaca. Od 2000 godine do danas knjižnica radi i djeluje u novoizgrađenoj  Osnovnoj školi. Sadrži velik broj jedinca građe koja je namijenjena samo osnovnoškolcima. Za vrijeme rata knjižnica je prestala djelovati na neko vrijeme i puno jedinica građe je bilo uništeno, nakon izgradnje nove škole knjižnica je ponovno počela djelovati i uspjela je pribaviti svu uništenu i nestalu građu. Kako ova knjižnica još uvijek nema svoju web stranicu cilj mog projekta je izraditi im ju. Web stranice knjižnice nude korisnicima više informacijama. Korisnici mogu kontaktirati knjižničarku putem e maila, poslati joj  upit o informacijama koje ih zanimaju i jedinicama građe.
+
+
+OVO NITKO NIJE GLEDAO
+"Ovo nitko nije gledao" je naziv stranice čija su tema nepoznati i "loši" filmovi do kojih se može doći najvećim dijelom tuđom preporukom jer nemaju reklame, dvd-ove u prodaji, a nisu bili ni u kinima. Stranica bi služila ljubiteljima takozvanih thrash filmova i onima koji se žele dobro nasmijati lošoj produkciji, slabo napisanim scenarijima i nenadarenim glumcima te bizarnim temama. Stranica bi se sastojala od korisničkog dijela koji omogućuje registraciju, pisanje recenzija i preporuka, ocjenjivanje i objavljivanje fanarta. Privatni dio omogućavao bi brisanje i dodavanje podataka. Stranica će nuditi i mogućnost pretraživanja prema ključnim riječima. Cilj stranice je okupiti ljude sličnih ili istih filmskih ukusa najvećim dijelom zbog zabave.
+
+
+Tota Sclavonia
+Tota Sclavonia je projekt koji će mnogim turistima olakšati i poboljšati turistički posjet Slavoniji. Kako i sam naziv aplikacije govori, u ovaj projekt će biti uključena cijela Slavonija. Na temelju vlastitih interesa i hobija, svaki korisnik ove aplikacije će dobiti važne i detaljne informacije o tome gdje može pronaći određene znamenitosti, lokacije, građevine, kafiće, restorane i sl., koji će biti baš po njegovoj volji. Nakon ili tijekom posjeta, korisnik će moći aktivno sudjelovati u izmjeni podataka koji se već nalaze u bazama te bi aplikacija bila nadopunjena od strane administratora, ali i od strane samih korisnika.  Svaki korisnik će ostaviti pohvalu ili kritiku nakon posjeta, koje bi uvelike pomogle budućim posjetiteljima i korisnicima ove aplikacije.
+
+
+Studenti grada Korčule
+Baza podataka studenata grada Korčule je projekt koji će udruzi studenata grada Korčule omogućiti uvid u bazu svojih tekućih, ali i starih članova. Udruga ima jako malo financijskih sredstava te će im ova baza biti savršena da vode računa o svim studentima i njihovim završenim zvanjima u nadi za pronalaskom posla u struci. Udruga trenutačno ima problema sa odazivom članova te se ovim projektom nadaju da će odaziv biti veći te da će na jednom mjestu imati sve što bi im moglo pomoći u daljnjem radu. Posjetitelji će moći ovim putem pratiti događanja i novosti u radu udruge. Također je i predviđeno napraviti neki obrazac gdje će se moći napisati pohvale ili kritike koje će uvelike pomoći udruzi u njenom daljnjem radu.
+
+
+Great Plate
+Osnovna ideja iza projekta Great Plate je pripomoći posjetiteljima oko kuhanja brzih i jednostavnih jela sa namirnicama koje već imaju u kuhinji. Moderan način života u određenim slučajevima ne ostavlja puno vremena za uživanje u zdravoj i ukusnoj hrani, pa stoga nije loše imati manju pomoć pri planiranju obroka. Nakon što posjetitelji odaberu namirnice koje imaju, ponudit će im se recepti u kojima se one koriste, zajedno sa dodatnim savjetima i uputama. Recepti su jednostavni, sadrže nekoliko sastojaka, i uz svaki je navedeno vrijeme pripreme te napomenama o hranjivim tvarima koje određene namirnice sadrže. Projekt je namijenjen kulinarskim početnicima koji traže savjet ali i iskusnim gurmanima koji žele podijeliti svoje znanje.
+
+
+Idemo u Dubrovnik
+"Idemo u Dubrovnik" je stranica koja ima za cilj predstaviti grad Dubrovnik i njegovu okolicu (njihova najpoznatija odredišta) te planirati put u navedene destinacije. Svaki posjetitelj stranice može slati mailove s različitim upitima te prijedlozima, ali također postoji i opcija registriranja koja služi za to da bi registrirani korisnici mogli ostaviti svoje podatke kako bi im se slale obavijesti vezane za planirana putovanja, događanja, izlete, ekskurzije i slično. Isto tako kako bi registrirani korisnici mogli prijaviti datume kada su u mogućnosti posjetiti navedene destinacije. Kako bi se provjerila (ne)zadovoljnost korisnika, stranica će sadržavati mogućnost ocjenjivanja zvjezdicama i prostor u kojem će se moći upisivati pohvale, odnosno žalbe.
+
+
+UM DJ
+Udruga mladih Đakovo, ili skraćeno UM DJ, je volonterska udruga s područja Đakova. Udruga postoji već deset godina no posljednjih godina je posebno aktivna i u svojoj organizaciji ima čak tri festivala te provodi brojne druge događaje i radionice. Udruga je aktivna na Facebooku putem profila koji uređuje nekoliko stranica od kojih svaka organizira razne evente. Kako bi se olakšala organizacija među samim članovima i brojnim volonterima, potrebna je web stranica koja će pružiti jasan pregled aktivnosti, njihovog vremena i lokacije te popis odgovornih osoba po događajima. Stranica će biti otvorena korisnicima, ažurna i pregledna te će na jednom mjestu nuditi pregled svih aktivnosti udruge.
+
+
+AZIL OSIJEK
+Tema projekta je sklonište za životinje (Udruge za zaštitu životinja 'Pobjede'). Sklonište se nalazi u Osijeku na adresi Nemetinska cesta bb te je registrirano pri Ministarstvu poljoprivrede. Sklonište je prvenstveno namijenjeno za pse, a volonteri pozivaju ljude na njihovo udomljavanje ili kumstvo, na dolazak u azil kako bi mogli odvesti pse u šetnju, donošenje pseće hrane i ostalih potrebnih stvari ili pomoći na bilo koji drugi način. Putem ove stranice javnost će moći dobiti uvid u razna događanja koja volonteri organiziraju (poput aukcija), moći će saznati koji psi traže dom, moći će kontaktirati azil ukoliko imaju pitanja ili žele na neki način pomoći.
