@@ -17,3 +17,12 @@ inner join orderdetails d on c.`orderNumber`=d.`orderNumber`
 inner join products e on d.`productCode`=e.`productCode`
 where e.`productLine`='Trains';
 
+select distinct a.`firstName`,a.`lastName`
+from employees a 
+inner join customers b on a.`employeeNumber`=b.`salesRepEmployeeNumber`
+inner join orders c on b.`customerNumber`=c.`customerNumber`
+inner join orderdetails d on c.`orderNumber`=d.`orderNumber`
+inner join products e on d.`productCode`=e.`productCode`
+where e.`productLine`='Trains' order by a.`firstName`;
+
+
