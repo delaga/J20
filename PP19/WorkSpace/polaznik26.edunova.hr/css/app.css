@@ -1,0 +1,11 @@
+body > div > div > div > div > h1{
+    text-align: center;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+body > div > div > div > div  {
+    font-weight: bold;
+    text-align: center;
+    
+}
