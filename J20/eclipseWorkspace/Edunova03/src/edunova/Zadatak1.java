@@ -8,19 +8,29 @@ public class Zadatak1 {
 	// ispišite Osijek, inaèe ispišite Vinkovci
 
 	public static void main(String[] args) {
-		int i = Integer.parseInt(
-				JOptionPane.showInputDialog("B")
-				);
+//		int i = Integer.parseInt(
+//				JOptionPane.showInputDialog("B")
+//				);
+//		
+//		//boolean paran = i % 2 == 0;
+//		
+//		if(i % 2 == 0) {
+//			System.out.println("Osijek");
+//		}else {
+//			System.out.println("Vinkovci");
 		
-		//boolean paran = i % 2 == 0;
+		int i=Integer.parseInt(JOptionPane.showInputDialog("Unesi broj"));
 		
-		if(i % 2 == 0) {
-			System.out.println("Osijek");
+		if(i%2==0) {
+			System.out.println("parni je");
 		}else {
-			System.out.println("Vinkovci");
+			System.out.println("neparni je");
+		}
+		}
+		
+			
 		}
 		
 		
-		
-	}
-}
+	
+

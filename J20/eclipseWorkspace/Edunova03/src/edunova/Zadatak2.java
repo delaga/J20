@@ -9,22 +9,33 @@ public class Zadatak2 {
 	// ispiši OK, inaèe nemoj ništa ispisati
 	
 	public static void main(String[] args) {
-		int i = Integer.parseInt(
-				JOptionPane.showInputDialog("B1")
-				);
-		int j = Integer.parseInt(
-				JOptionPane.showInputDialog("B2")
-				);
-		int k = Integer.parseInt(
-				JOptionPane.showInputDialog("B3")
-				);
+//		int i = Integer.parseInt(
+//				JOptionPane.showInputDialog("B1")
+//				);
+//		int j = Integer.parseInt(
+//				JOptionPane.showInputDialog("B2")
+//				);
+//		int k = Integer.parseInt(
+//				JOptionPane.showInputDialog("B3")
+//				);
+//		
+//		int zbroj = i+j+k;
+//		
+//		if(zbroj>100) {
+//			System.out.println("OK");
 		
-		int zbroj = i+j+k;
+		int a =Integer.parseInt(JOptionPane.showInputDialog("b1"));
+		int b =Integer.parseInt(JOptionPane.showInputDialog("b2"));
+		int c =Integer.parseInt(JOptionPane.showInputDialog("b3"));
 		
-		if(zbroj>100) {
-			System.out.println("OK");
+		int zbroj=a+b+c;
+		if(zbroj<100) {
+			System.out.println(zbroj);
+		}else {
+			System.err.println("Veæi je od 100");
+		}
 		}
 		
 				
 	}
-}
+
