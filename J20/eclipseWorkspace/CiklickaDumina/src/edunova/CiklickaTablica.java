@@ -23,33 +23,26 @@ public class CiklickaTablica {
 				matrica[maxRed][i] = brojUpisuje;
 				brojUpisuje++;
 			}
-			if (brojUpisuje > krajBroj) {
-				break;
-			}
+
 			//puni matricu dole-> gore
 			for (int i = maxRed - 1; i >= minRed; i--) {
 				matrica[i][minStupac] = brojUpisuje;
 				brojUpisuje++;
 			}
-			if (brojUpisuje > krajBroj) {
-				break;
-			}
+			
+			
 			//puni matricu lijevo->desno
 			for (int i = minStupac + 1; i <= maxStupac; i++) {
 				matrica[minRed][i] = brojUpisuje;
 				brojUpisuje++;
 			}
-			if (brojUpisuje > (krajBroj)) {
-				break;
-			}
+			
 			//puni matricu gore->dole
 			for (int i = minRed + 1; i <= maxRed - 1; i++) {
 				matrica[i][maxStupac] = brojUpisuje;
 				brojUpisuje++;
 			}
-			if (brojUpisuje > krajBroj) {
-				break;
-			}
+			
 			//dekrement maxime i inkrement minimume
 			minStupac++;
 			maxStupac--;
