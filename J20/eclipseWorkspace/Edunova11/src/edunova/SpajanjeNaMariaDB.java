@@ -29,7 +29,7 @@ public class SpajanjeNaMariaDB {
 		} catch (ClassNotFoundException e) {
 		} catch (SQLException e) {
 		}
-//		citajIzBaze();
+	citajIzBaze();
 //		try {
 //			veza.close();
 //		} catch (SQLException e) {
