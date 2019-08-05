@@ -30,6 +30,10 @@ public class RadSStringKlasom {
 		String dio = ime.substring(0,2);
 		
 		System.out.println(dio);
+		
+		String stringili="Riba ribi grize rep";
+		String razvaljeniString[]=stringili.split(" ");
+		System.out.println(razvaljeniString.length);
 	
 		
 		

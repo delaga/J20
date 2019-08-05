@@ -29,7 +29,7 @@ public class StartOsoba {
 		
 		//uništavanje objekta
 		// odraðuje GC - garbage collector
-		if(Osoba.provjeraOib("15256585455")) {
+		if(Osoba.provjeraOib("12121212121")) {
 			System.out.println("OIB je OK");
 		}
 		
