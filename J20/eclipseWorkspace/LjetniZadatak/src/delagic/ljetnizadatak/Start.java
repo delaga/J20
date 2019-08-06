@@ -21,6 +21,25 @@ public class Start {
 		SelectIzBaze.ispisiTablice();
 		izbornikDelanja();
 		int radnja=Integer.parseInt(JOptionPane.showInputDialog("Unesite redni broj predviðene radnje:"));
+		switch (radnja) {
+		case 1:
+			
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			
+			break;
+		case 4:
+			
+			break;
+		case 5:
+			
+			break;
+		default:
+			break;
+		}
 	}
 
 	private static void izbornikDelanja() {
