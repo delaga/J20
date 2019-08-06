@@ -1,5 +1,5 @@
 package delagic.ljetnizadatak;
 
-public class DodavanjeUTablicu {
+public class Dodavanje {
 
 }

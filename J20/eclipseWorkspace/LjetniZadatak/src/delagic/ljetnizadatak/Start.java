@@ -13,16 +13,16 @@ public class Start {
 		
 		switch (radnja) {
 		case 1:
-			new BrisanjeIzTablice();
+			Brisanje.BrisanjeIzTablice();
 			System.out.println(SelectIzBaze.tablica);
 			
 			
 			break;
 		case 2:
-			new DodavanjeUTablicu();
+			new Dodavanje();
 			break;
 		case 3:
-			new MjenjanjeuTablici();
+			
 			break;
 		case 4:
 			
