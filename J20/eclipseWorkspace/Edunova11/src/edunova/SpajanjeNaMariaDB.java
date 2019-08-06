@@ -24,7 +24,7 @@ public class SpajanjeNaMariaDB {
 	public SpajanjeNaMariaDB() {
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");	
-			veza=DriverManager.getConnection("jdbc:mariadb://localhost/edunovaj20","edunova","edunova");
+			veza=DriverManager.getConnection("jdbc:mariadb://localhost/edunovaj19","edunova","edunova");
 			//System.out.println(veza.getMetaData().getCatalogTerm());			
 		} catch (ClassNotFoundException e) {
 		} catch (SQLException e) {

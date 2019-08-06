@@ -3,12 +3,14 @@ package edunova;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 public class ObradaPogresaka {
 	public ObradaPogresaka() {
 		List<String> lista=new ArrayList<>();
 		try {
-			lista.add(null);
-			lista.add(null);
+			lista.add(JOptionPane.showInputDialog("Unesi a"));
+			lista.add(JOptionPane.showInputDialog("Unesi b"));
 			System.out.println(lista.get(1).substring(0,2));
 		} catch (IndexOutOfBoundsException e) {
 			System.out.println("Element ne postoji");

@@ -77,7 +77,7 @@ public class Start {
 
 	private Osoba unosOsobe() {
 		Osoba o=new Osoba();
-		
+		o=postaviVrijednosti(o);
 		return o;
 	}
 	
