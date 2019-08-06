@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Baza {
+public class Database {
 	
 	public Connection veza;
 	
@@ -18,7 +18,7 @@ public class Baza {
 		this.veza = veza;
 	}
 	
-	public Baza() {
+	public Database() {
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");	
 			veza=DriverManager.getConnection("jdbc:mariadb://134.209.23.129/pausalni_obrt","edunova","edunova");

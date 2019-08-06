@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
 
-public class SelectIzBaze {
+public class Select {
 	
 	public static int tablica;
 	
@@ -16,11 +16,11 @@ public class SelectIzBaze {
 	}
 
 	public static void setTablica(int tablica) {
-		SelectIzBaze.tablica = tablica;
+		Select.tablica = tablica;
 	}
 
 	public static void ispisiTablice() {
-		Baza spajanje=new Baza();
+		Database spajanje=new Database();
 		spajanje.getVeza();
 		PreparedStatement izraz;
 		

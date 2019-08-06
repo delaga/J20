@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 
-public class Brisanje {
+public class Delete {
 	public static void BrisanjeIzTablice() {
-		switch (SelectIzBaze.tablica) {
+		switch (Select.tablica) {
 		case 1:
 			System.out.println("SSSSSSSSS");
 			break;

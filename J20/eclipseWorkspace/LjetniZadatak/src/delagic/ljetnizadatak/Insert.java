@@ -1,5 +1,5 @@
 package delagic.ljetnizadatak;
 
-public class Dodavanje {
+public class Insert {
 
 }

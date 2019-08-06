@@ -1,5 +1,5 @@
 package delagic.ljetnizadatak;
 
-public class Mjenjanje {
+public class Update {
 
 }

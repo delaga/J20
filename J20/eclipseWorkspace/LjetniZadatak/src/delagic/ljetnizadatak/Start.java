@@ -7,19 +7,19 @@ public class Start {
 	
 	
 	public static void main(String[] args) {
-		SelectIzBaze.ispisiTablice();
+		Select.ispisiTablice();
 		izbornikDelanja();
 		int radnja=Integer.parseInt(JOptionPane.showInputDialog("Unesite redni broj predviðene radnje:"));
 		
 		switch (radnja) {
 		case 1:
-			Brisanje.BrisanjeIzTablice();
-			System.out.println(SelectIzBaze.tablica);
+			Delete.BrisanjeIzTablice();
+			System.out.println(Select.tablica);
 			
 			
 			break;
 		case 2:
-			new Dodavanje();
+			new Insert();
 			break;
 		case 3:
 			
