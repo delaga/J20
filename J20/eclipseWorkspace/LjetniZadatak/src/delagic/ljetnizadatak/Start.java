@@ -23,13 +23,13 @@ public class Start {
 		int radnja=Integer.parseInt(JOptionPane.showInputDialog("Unesite redni broj predviðene radnje:"));
 		switch (radnja) {
 		case 1:
-			
+			new BrisanjeIzTablice();
 			break;
 		case 2:
-			
+			new DodavanjeUTablicu();
 			break;
 		case 3:
-			
+			new MjenjanjeuTablici();
 			break;
 		case 4:
 			

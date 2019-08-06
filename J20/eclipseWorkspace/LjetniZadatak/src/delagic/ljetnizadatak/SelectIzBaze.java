@@ -38,6 +38,7 @@ public class SelectIzBaze {
 		switch (key) {
 		case 1:
 			try {
+				System.out.println("Tablica klijent_kupac:");
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM klijent_kupac");
 				ResultSet rs=izraz.executeQuery();
 				while(rs.next()) {
@@ -52,6 +53,7 @@ public class SelectIzBaze {
 			break;
 		case 2:
 			try {
+				System.out.println("Tablica korisnik:");
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM korisnik");
 				ResultSet rs=izraz.executeQuery();
 				while (rs.next()) {
@@ -65,6 +67,7 @@ public class SelectIzBaze {
 			break;
 		case 3:
 			try {
+				System.out.println("Tablica podaci_o_obrtu:");
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM podaci_o_obrtu");
 				ResultSet rs=izraz.executeQuery();
 				while (rs.next()) {
@@ -79,6 +82,7 @@ public class SelectIzBaze {
 			break;
 		case 4:
 			try {
+				System.out.println("Tablica racun:");
 				izraz=spajanje.veza.prepareStatement(" select racun.broj_racuna,klijent_kupac.naziv,racun.vrijeme_idavanja, korisnik.ime "
 						+ "from racun inner join klijent_kupac on racun.klijent_kupac_id=klijent_kupac.id "
 						+ "inner join korisnik on racun.izdao_korisnik_id=korisnik.id;");
@@ -97,6 +101,7 @@ public class SelectIzBaze {
 			break;
 		case 5:
 			try {
+				System.out.println("Tablica stavka:");
 				izraz=spajanje.veza.prepareStatement("select stavka.id,usluga_proizvod.naziv,racun.broj_racuna,rabat,kolicina from stavka "
 						+ "inner join usluga_proizvod on stavka.usluga_proizvod_id=usluga_proizvod.id inner join racun on stavka.racun_id=racun.id");
 				ResultSet rs=izraz.executeQuery();
@@ -113,6 +118,7 @@ public class SelectIzBaze {
 			break;
 		case 6:
 			try {
+				System.out.println("Tablica usluga_prozvod:");
 				izraz=spajanje.veza.prepareStatement("select * from usluga_proizvod");
 				ResultSet rs=izraz.executeQuery();
 				while (rs.next()) {
