@@ -7,10 +7,25 @@ public class Zadatak4 {
 
 	public static void main(String[] args) {
 		
-		boolean jedanDoSto=true;
+//		boolean jedanDoSto=true;
+//		
+//		while(true) {
+//			if(jedanDoSto) {
+//				for(int i=1;i<100;i++) {
+//					System.out.println(i);
+//				}
+//			}else {
+//				for(int i=100;i>0;i--) {
+//					System.out.println(i);
+//				}
+//			}
+//			jedanDoSto=!jedanDoSto;
+//		}
+//		
+		boolean jos=true;
 		
-		while(true) {
-			if(jedanDoSto) {
+		while (true) {
+			if(jos) {
 				for(int i=1;i<100;i++) {
 					System.out.println(i);
 				}
@@ -19,7 +34,7 @@ public class Zadatak4 {
 					System.out.println(i);
 				}
 			}
-			jedanDoSto=!jedanDoSto;
+			jos=!jos;
 		}
 		
 	}

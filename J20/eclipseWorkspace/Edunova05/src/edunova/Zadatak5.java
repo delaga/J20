@@ -7,10 +7,14 @@ public class Zadatak5 {
 	//5050
 	
 	public static void main(String[] args) {
+//		int i=1,s=0;
+//		do {
+//			s+=i++;
+//		}while(i<=100);
+//		System.out.println(s);
 		int i=1,s=0;
-		do {
-			s+=i++;
-		}while(i<=100);
+		do {s+=i++;}while(i<=100); //AHAAA! :D
+		
 		System.out.println(s);
 	}
 	
