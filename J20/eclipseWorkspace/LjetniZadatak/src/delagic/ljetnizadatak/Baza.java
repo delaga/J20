@@ -22,7 +22,7 @@ public class Baza {
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");	
 			veza=DriverManager.getConnection("jdbc:mariadb://134.209.23.129/pausalni_obrt","edunova","edunova");
-			//System.out.println(veza.getMetaData().getCatalogTerm());			
+				
 		} catch (ClassNotFoundException e) {
 			System.out.println(e);
 		} catch (SQLException e) {

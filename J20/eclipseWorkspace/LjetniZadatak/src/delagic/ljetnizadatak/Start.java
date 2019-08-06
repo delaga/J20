@@ -3,10 +3,50 @@ package delagic.ljetnizadatak;
 import javax.swing.JOptionPane;
 
 public class Start {
+	
 	public static void main(String[] args) {
 		SelectIzBaze.ispisiTablice();
 		izbornikDelanja();
 		int radnja=Integer.parseInt(JOptionPane.showInputDialog("Unesite redni broj predviðene radnje:"));
+	
+		glavna_petlja:
+		while(true) {
+			switch (radnja) {
+			case 1:
+				brisanje();
+				break;
+			case 2:
+				dodavanje();
+				break;
+			case 3:
+				mjenjanje();
+				break;
+			case 4:
+				SelectIzBaze.ispisiTablice();
+				izbornikDelanja();
+				
+				break;
+			case 5:
+				break glavna_petlja;
+			default:
+				break;
+		}
+		}
+	}
+
+	private static void mjenjanje() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void dodavanje() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void brisanje() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	private static void izbornikDelanja() {
