@@ -10,16 +10,8 @@ import java.sql.PreparedStatement;
 public class BrisanjeIzTablice {
 	private Connection veza;
 	private PreparedStatement izraz;
-	private void brisi() {
-		
-		switch (key) {
-		case value:
-			
-			break;
 
-		default:
-			break;
-		}
-	}
+	
+
 	
 }

@@ -9,10 +9,21 @@ import javax.swing.JOptionPane;
 
 public class SelectIzBaze {
 	
+	public static int tablica;
+	
+	public static int getTablica() {
+		return tablica;
+	}
+
+	public static void setTablica(int tablica) {
+		SelectIzBaze.tablica = tablica;
+	}
+
 	public static void ispisiTablice() {
 		Baza spajanje=new Baza();
 		spajanje.getVeza();
 		PreparedStatement izraz;
+		
 		
 		try {
 			System.out.println();
@@ -34,10 +45,12 @@ public class SelectIzBaze {
 		System.out.println("0. Izlaz");
 		System.out.println("_____________________");
 		int key=Integer.parseInt(JOptionPane.showInputDialog("Unesi broj"));
+		
 		System.out.println();
 		switch (key) {
 		case 1:
 			try {
+				tablica=1;
 				System.out.println("Tablica klijent_kupac:");
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM klijent_kupac");
 				ResultSet rs=izraz.executeQuery();
@@ -53,6 +66,7 @@ public class SelectIzBaze {
 			break;
 		case 2:
 			try {
+				tablica=2;
 				System.out.println("Tablica korisnik:");
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM korisnik");
 				ResultSet rs=izraz.executeQuery();
@@ -67,6 +81,7 @@ public class SelectIzBaze {
 			break;
 		case 3:
 			try {
+				tablica=3;
 				System.out.println("Tablica podaci_o_obrtu:");
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM podaci_o_obrtu");
 				ResultSet rs=izraz.executeQuery();
@@ -82,6 +97,7 @@ public class SelectIzBaze {
 			break;
 		case 4:
 			try {
+				tablica=4;
 				System.out.println("Tablica racun:");
 				izraz=spajanje.veza.prepareStatement(" select racun.broj_racuna,klijent_kupac.naziv,racun.vrijeme_idavanja, korisnik.ime "
 						+ "from racun inner join klijent_kupac on racun.klijent_kupac_id=klijent_kupac.id "
@@ -101,6 +117,7 @@ public class SelectIzBaze {
 			break;
 		case 5:
 			try {
+				tablica=5;
 				System.out.println("Tablica stavka:");
 				izraz=spajanje.veza.prepareStatement("select stavka.id,usluga_proizvod.naziv,racun.broj_racuna,rabat,kolicina from stavka "
 						+ "inner join usluga_proizvod on stavka.usluga_proizvod_id=usluga_proizvod.id inner join racun on stavka.racun_id=racun.id");
@@ -118,6 +135,7 @@ public class SelectIzBaze {
 			break;
 		case 6:
 			try {
+				tablica=6;
 				System.out.println("Tablica usluga_prozvod:");
 				izraz=spajanje.veza.prepareStatement("select * from usluga_proizvod");
 				ResultSet rs=izraz.executeQuery();
