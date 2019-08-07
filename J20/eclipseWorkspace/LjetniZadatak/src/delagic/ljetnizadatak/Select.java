@@ -52,11 +52,7 @@ public class Select {
 		System.out.println();
 		ispisiTablicu(key);
 		
-		
-		
-		
-		
-		// TODO Auto-generated method stub
+
 		
 	}
 	public static int ispisiTablicu(int key) {

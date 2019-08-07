@@ -47,25 +47,17 @@ public class Delete {
 		}
 		//gdje da stavim izlistanje nakon brisanja
 		//brisanje se izvrši ali ne mogu dobiti da mi izlista kako tablica sada izgleda
-		try {
-			izraz=spajanje.veza.prepareStatement("select * from "+table);
-			ResultSet rs=izraz.executeQuery();
+		
+			
 			switch (Select.tablica) {
 			case 1:
-				while(rs.next()) {
-					System.out.println(rs.getInt("id")+" "+rs.getString("naziv"));
-				}
-				rs.close();
-				spajanje.veza.close();
+				Select.ispisiTablicu(1);
 				break;
 
 			default:
 				break;
 			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
 		return 0;
 
 	}
