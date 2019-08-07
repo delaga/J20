@@ -7,72 +7,64 @@ import java.sql.SQLIntegrityConstraintViolationException;
 
 import javax.swing.JOptionPane;
 
-
 public class Delete {
-	
+
 	private static PreparedStatement izraz;
-	private static int redak=0;
+	private static int redak = 0;
 	static boolean uspjesno;
-	
+
 	public static int BrisanjeIzTablice() {
-		
-		Database spajanje=new Database();
+
+		Database spajanje = new Database();
 		spajanje.getVeza();
 		String table = null;
 		switch (Select.tablica) {
 		case 1:
-			 table="klijent_kupac";
+			table = "klijent_kupac";
 			break;
 		case 2:
-			 table="korisnik";
+			table = "korisnik";
 			break;
 		case 3:
-			table="podaci_o_obrtu";
+			table = "podaci_o_obrtu";
 			break;
 		case 4:
-			table="racun";
+			table = "racun";
 			break;
 		case 5:
-			table="stavka";
+			table = "stavka";
 			break;
 		case 6:
-			table="usluga_proizvod";
+			table = "usluga_proizvod";
 			break;
 		default:
 			break;
 		}
 		try {
-			izraz=spajanje.veza.prepareStatement("delete from "+table+" where id=?");
-			redak=Integer.parseInt(JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisatu i tabeli "+table));
-			izraz.setInt(1,redak);
-			
-			
+			izraz = spajanje.veza.prepareStatement("delete from " + table + " where id=?");
+			redak = Integer.parseInt(
+					JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisatu i tabeli " + table));
+			izraz.setInt(1, redak);
+
 			return izraz.executeUpdate();
-			
-		}catch (SQLIntegrityConstraintViolationException e) {
-			
-			uspjesno=false;
-			//e.printStackTrace();
+
+		} catch (SQLIntegrityConstraintViolationException e) {
+
+			uspjesno = false;
+			// e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
-		
-		if(uspjesno) {
-			JOptionPane.showConfirmDialog(null, "OBRISAN redak: "+redak);
-		}else {
+
+		if (uspjesno) {
+			JOptionPane.showConfirmDialog(null, "OBRISAN redak: " + redak);
+		} else {
 			JOptionPane.showMessageDialog(null, "Sorry, redak ima FK");
 		}
-		
-			
-		
+
 		return 0;
-		
-	}
-	
-	
-	}
-	
 
-	
+	}
 
+}
