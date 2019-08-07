@@ -16,7 +16,7 @@ public class Start {
 		switch (radnja) {
 		case 1:
 			Delete.BrisanjeIzTablice();
-			
+			Select.ispisiTablicu(Select.tablica);
 			
 			
 			break;

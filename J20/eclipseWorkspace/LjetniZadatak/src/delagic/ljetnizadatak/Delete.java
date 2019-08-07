@@ -1,7 +1,7 @@
 package delagic.ljetnizadatak;
 
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
@@ -39,27 +39,24 @@ public class Delete {
 		}
 		try {
 			izraz=spajanje.veza.prepareStatement("delete from "+table+" where id=?");
-			izraz.setInt(1,Integer.parseInt(JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisatu i tabeli "+table)));
+			int redak=Integer.parseInt(JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisatu i tabeli "+table));
+			izraz.setInt(1,redak);
+			JOptionPane.showConfirmDialog(null, "OBRISAN redak: "+redak);
+			
 			return izraz.executeUpdate();
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 		//gdje da stavim izlistanje nakon brisanja
 		//brisanje se izvrši ali ne mogu dobiti da mi izlista kako tablica sada izgleda
 		
 			
-			switch (Select.tablica) {
-			case 1:
-				Select.ispisiTablicu(1);
-				break;
-
-			default:
-				break;
-			}
 		
 		return 0;
-
+		
 	}
 	
 	
