@@ -8,6 +8,8 @@ public class Start {
 	
 	public static void main(String[] args) {
 		Select.ispisiTablice();
+		Select.ispisiTablicu(0);
+		
 		izbornikDelanja();
 		int radnja=Integer.parseInt(JOptionPane.showInputDialog("Unesite redni broj predviðene radnje:"));
 		

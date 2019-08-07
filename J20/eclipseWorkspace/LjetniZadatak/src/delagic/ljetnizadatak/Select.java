@@ -18,15 +18,18 @@ public class Select {
 	public static void setTablica(int tablica) {
 		Select.tablica = tablica;
 	}
+	
+	
 
 	public static void ispisiTablice() {
-		Database spajanje=new Database();
-		spajanje.getVeza();
-		PreparedStatement izraz;
+		
 		
 		
 		try {
 			System.out.println();
+			Database spajanje=new Database();
+			spajanje.getVeza();
+			PreparedStatement izraz;
 			izraz = spajanje.veza.prepareStatement("show tables");
 			ResultSet tablice=izraz.executeQuery();
 			int i=1;
@@ -47,11 +50,24 @@ public class Select {
 		int key=Integer.parseInt(JOptionPane.showInputDialog("Unesi broj"));
 		
 		System.out.println();
+		ispisiTablicu(key);
+		
+		
+		
+		
+		
+		// TODO Auto-generated method stub
+		
+	}
+	public static int ispisiTablicu(int key) {
 		switch (key) {
 		case 1:
 			try {
 				tablica=1;
 				System.out.println("Tablica klijent_kupac:");
+				Database spajanje=new Database();
+				spajanje.getVeza();
+				PreparedStatement izraz;
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM klijent_kupac");
 				ResultSet rs=izraz.executeQuery();
 				while(rs.next()) {
@@ -68,6 +84,9 @@ public class Select {
 			try {
 				tablica=2;
 				System.out.println("Tablica korisnik:");
+				Database spajanje=new Database();
+				spajanje.getVeza();
+				PreparedStatement izraz;
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM korisnik");
 				ResultSet rs=izraz.executeQuery();
 				while (rs.next()) {
@@ -83,6 +102,9 @@ public class Select {
 			try {
 				tablica=3;
 				System.out.println("Tablica podaci_o_obrtu:");
+				Database spajanje=new Database();
+				spajanje.getVeza();
+				PreparedStatement izraz;
 				izraz=spajanje.veza.prepareStatement("SELECT * FROM podaci_o_obrtu");
 				ResultSet rs=izraz.executeQuery();
 				while (rs.next()) {
@@ -99,6 +121,9 @@ public class Select {
 			try {
 				tablica=4;
 				System.out.println("Tablica racun:");
+				Database spajanje=new Database();
+				spajanje.getVeza();
+				PreparedStatement izraz;
 				izraz=spajanje.veza.prepareStatement(" select racun.broj_racuna,klijent_kupac.naziv,racun.vrijeme_idavanja, korisnik.ime "
 						+ "from racun inner join klijent_kupac on racun.klijent_kupac_id=klijent_kupac.id "
 						+ "inner join korisnik on racun.izdao_korisnik_id=korisnik.id;");
@@ -119,6 +144,9 @@ public class Select {
 			try {
 				tablica=5;
 				System.out.println("Tablica stavka:");
+				Database spajanje=new Database();
+				spajanje.getVeza();
+				PreparedStatement izraz;
 				izraz=spajanje.veza.prepareStatement("select stavka.id,usluga_proizvod.naziv,racun.broj_racuna,rabat,kolicina from stavka "
 						+ "inner join usluga_proizvod on stavka.usluga_proizvod_id=usluga_proizvod.id inner join racun on stavka.racun_id=racun.id");
 				ResultSet rs=izraz.executeQuery();
@@ -137,6 +165,9 @@ public class Select {
 			try {
 				tablica=6;
 				System.out.println("Tablica usluga_prozvod:");
+				Database spajanje=new Database();
+				spajanje.getVeza();
+				PreparedStatement izraz;
 				izraz=spajanje.veza.prepareStatement("select * from usluga_proizvod");
 				ResultSet rs=izraz.executeQuery();
 				while (rs.next()) {
@@ -157,13 +188,7 @@ public class Select {
 			break;
 		
 		}
-		
-		
-		
-		
-		// TODO Auto-generated method stub
-		
+		return 0;
 	}
-	
 
 }
