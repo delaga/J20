@@ -14,7 +14,7 @@ public class Start {
 		switch (radnja) {
 		case 1:
 			Delete.BrisanjeIzTablice();
-			System.out.println(Select.tablica);
+			
 			
 			
 			break;
