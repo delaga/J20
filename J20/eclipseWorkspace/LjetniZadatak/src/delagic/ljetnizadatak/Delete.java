@@ -3,6 +3,7 @@ package delagic.ljetnizadatak;
 import java.sql.PreparedStatement;
 
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 
 import javax.swing.JOptionPane;
 
@@ -10,8 +11,11 @@ import javax.swing.JOptionPane;
 public class Delete {
 	
 	private static PreparedStatement izraz;
+	private static int redak=0;
+	static boolean uspjesno;
 	
 	public static int BrisanjeIzTablice() {
+		
 		Database spajanje=new Database();
 		spajanje.getVeza();
 		String table = null;
@@ -39,19 +43,26 @@ public class Delete {
 		}
 		try {
 			izraz=spajanje.veza.prepareStatement("delete from "+table+" where id=?");
-			int redak=Integer.parseInt(JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisatu i tabeli "+table));
+			redak=Integer.parseInt(JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisatu i tabeli "+table));
 			izraz.setInt(1,redak);
-			JOptionPane.showConfirmDialog(null, "OBRISAN redak: "+redak);
+			
 			
 			return izraz.executeUpdate();
 			
+		}catch (SQLIntegrityConstraintViolationException e) {
+			
+			uspjesno=false;
+			//e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		//gdje da stavim izlistanje nakon brisanja
-		//brisanje se izvrši ali ne mogu dobiti da mi izlista kako tablica sada izgleda
+		if(uspjesno) {
+			JOptionPane.showConfirmDialog(null, "OBRISAN redak: "+redak);
+		}else {
+			JOptionPane.showMessageDialog(null, "Sorry, redak ima FK");
+		}
 		
 			
 		

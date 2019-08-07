@@ -27,7 +27,7 @@ public class Start {
 			
 			break;
 		case 4:
-			
+			Select.ispisiTablice();
 			break;
 		case 5:
 			
