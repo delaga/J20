@@ -1,5 +1,6 @@
 package edunova;
 
+import java.sql.SQLInput;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -41,20 +42,20 @@ public class Pomocno {
 			
 		}
 	}
-	public static Date unosDatum(String poruka) {
-		SimpleDateFormat df= new SimpleDateFormat(FORMAT_DATUMA);
-		while (true) {
-			try {
-				return df.parse(JOptionPane.showInputDialog(poruka));
-			} catch (Exception e) {
-				JOptionPane.showConfirmDialog(null, "Obavezan unos u formatu:"+FORMAT_DATUMA+"\nPrimjer današnji datum:"+df.format(new Date()));
-			}
-			
-			
-		}
-		
-		
-	}
-	
+//	public static  unosDatum(String poruka) {
+//		SimpleDateFormat df= new SimpleDateFormat(FORMAT_DATUMA);
+//		while (true) {
+//			try {
+//				return df.parse(JOptionPane.showInputDialog(poruka));
+//			} catch (Exception e) {
+//				JOptionPane.showConfirmDialog(null, "Obavezan unos u formatu:"+FORMAT_DATUMA+"\nPrimjer današnji datum:"+df.format(new Date()));
+//			}
+//			
+//			
+//		}
+//		
+//		
+//	}
+//	
 	
 }

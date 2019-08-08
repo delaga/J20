@@ -2,9 +2,11 @@ package delagic.ljetnizadatak;
 
 
 
+import java.awt.HeadlessException;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import javax.swing.JOptionPane;
@@ -110,19 +112,11 @@ public class Insert {
 				izraz.setString(1, JOptionPane.showInputDialog("Unesi broj raèuna:"));
 				izraz.setInt(2, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru klijenta/kupca")));
 				
-//				izraz.setTime(3, Time.valueOf(JOptionPane.showInputDialog("Unesi vrijeme izdavanja. Formata "+DATE_FORMAT+":")));
-//
-//				try {
-//					izraz.setDate(1, (Date) new SimpleDateFormat(DATE_FORMAT).parse(JOptionPane.showInputDialog("Unesi vrijeme izdavanja. Formata "+DATE_FORMAT+":")));
-//				} catch (HeadlessException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				} catch (ParseException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
+	//OVDJE SAM ZAPEO
 				
-				izraz.setDate(3, unosDatum("Unesi vrijeme izdavanja raèuna:"));
+				izraz.setDate(3, unosDatuma("Unesi datum izdavanja raèuna. Format:"+DATE_FORMAT));
+				izraz.setDate(4, unosDatuma("Unesi datum dospijeæa raèuna. Format:"+DATE_FORMAT));
+				izraz.setDate(5, unosDatuma("Unesi datum isporuke. Format:"+DATE_FORMAT));
 				
 				izraz.setInt(6,Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru djelatnika:")));
 				izraz.setString(7, JOptionPane.showInputDialog("Unesi napomenu"));
@@ -150,16 +144,27 @@ public class Insert {
 	}
 
 
-	private static Date unosDatum(String poruka) {
-		SimpleDateFormat df= new SimpleDateFormat(DATE_FORMAT);
-		while (true) {
-			try {
-				df.parse(JOptionPane.showInputDialog(poruka));
-			} catch (Exception e) {
-				e.printStackTrace();			}
+	private static Date unosDatuma(String poruka) {
+		SimpleDateFormat format= new SimpleDateFormat(DATE_FORMAT);
+		try {
+			java.sql.Date d= new java.sql.Date(format.parse(JOptionPane.showInputDialog(poruka)).getTime());
+			return d;
+		} catch (HeadlessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
+		
+		
+		
+		
 	}
+
+
+
 
 
 }
