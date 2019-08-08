@@ -121,6 +121,7 @@ public class Insert {
 				izraz.setInt(6,Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru djelatnika:")));
 				izraz.setString(7, JOptionPane.showInputDialog("Unesi napomenu"));
 				izraz.setString(8, JOptionPane.showInputDialog("Unesi naæin plaæanja:"));
+				izraz.executeQuery();
 			} catch (SQLException e) {
 				uspjesno=false;
 				e.printStackTrace();
@@ -144,14 +145,21 @@ public class Insert {
 	}
 
 
-	private static java.util.Date unosDatum(String poruka) {
-		SimpleDateFormat format=new SimpleDateFormat(DATE_FORMAT);
-		try {
-			return format.parse(JOptionPane.showInputDialog(poruka));
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+public static java.util.Date unosDatum(String poruka) {
+		
+		SimpleDateFormat df = new SimpleDateFormat(DATE_FORMAT);
+		while(true) {
+			
+			try {
+				return df.parse(JOptionPane.showInputDialog(poruka));
+			} catch (Exception e) {
+				JOptionPane.showConfirmDialog(null, 
+						"Obavezan unos u formatu: " + DATE_FORMAT 
+						+ "\nPrimjer na današnjem datumu:" + df.format(new Date(0)));
+			}
+	
 		}
+		
 		
 	}
 
