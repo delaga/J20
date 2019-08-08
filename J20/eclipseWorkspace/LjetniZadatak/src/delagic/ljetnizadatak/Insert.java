@@ -1,15 +1,22 @@
 package delagic.ljetnizadatak;
 
+
+
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 
 import javax.swing.JOptionPane;
 
+
+
+
 public class Insert {
-	private static PreparedStatement izraz;
-	private static int redak = 0;
+
 	static boolean uspjesno;
+	public static final String DATE_FORMAT="dd.MM.yyyy.";
+	
 
 	public static int DodavanjeUTablicu() {
 		Database spajanje = new Database();
@@ -55,7 +62,7 @@ public class Insert {
 				System.out.println(izraz.executeUpdate());
 
 			} catch (SQLException e) {
-
+				uspjesno=false;
 				e.printStackTrace();
 			}
 			break;
@@ -71,7 +78,7 @@ public class Insert {
 				izraz.setString(6, JOptionPane.showInputDialog("Unesi URL scan potpisa:"));
 				System.out.println(izraz.executeUpdate());
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				uspjesno=false;
 				e.printStackTrace();
 			}
 			break;
@@ -91,26 +98,68 @@ public class Insert {
 				izraz.setString(10, JOptionPane.showInputDialog("Unesi URL loga tvrtke"));
 				izraz.executeQuery();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				uspjesno=false;
 				e.printStackTrace();
 			}
 			break;
 		case 4:
 			try {
-				izraz=spajanje.veza.prepareStatement("insert into "+tablica+"(broj_racuna,klijent_kupac_id,"
+				izraz=spajanje.veza.prepareStatement("insert into "+table+"(broj_racuna,klijent_kupac_id,"
 						+ "vrijeme_idavanja,datum_dospijeca,datum_isporuke,izdao_korisnik_id"
 						+ ",napomena,nacin_placanja) values(?,?,?,?,?,?,?,?)");
 				izraz.setString(1, JOptionPane.showInputDialog("Unesi broj raèuna:"));
 				izraz.setInt(2, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru klijenta/kupca")));
-				//sranje, nastavljam sutra: izraz.setDate(3, Date.parse(JOptionPane.showInputDialog("Unesi datum ")));
+				
+//				izraz.setTime(3, Time.valueOf(JOptionPane.showInputDialog("Unesi vrijeme izdavanja. Formata "+DATE_FORMAT+":")));
+//
+//				try {
+//					izraz.setDate(1, (Date) new SimpleDateFormat(DATE_FORMAT).parse(JOptionPane.showInputDialog("Unesi vrijeme izdavanja. Formata "+DATE_FORMAT+":")));
+//				} catch (HeadlessException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				} catch (ParseException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+				
+				izraz.setDate(3, unosDatum("Unesi vrijeme izdavanja raèuna:"));
+				
+				izraz.setInt(6,Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru djelatnika:")));
+				izraz.setString(7, JOptionPane.showInputDialog("Unesi napomenu"));
+				izraz.setString(8, JOptionPane.showInputDialog("Unesi naæin plaæanja:"));
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				uspjesno=false;
 				e.printStackTrace();
 			}
 		default:
 			break;
+		case 5:
+			try {
+				izraz=spajanje.veza.prepareStatement("insert into "+table+"(usluga_proizvod_id,racun_id"
+						+ ",rabat,kolicina) values(?,?,?,?)");
+				izraz.setInt(1, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru usluge ili proizvoda:")));
+				izraz.setInt(2, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru raèuna:")));
+				izraz.setDouble(3, Double.parseDouble(JOptionPane.showInputDialog("Unesi rabat (%):")));
+				izraz.setDouble(4, Double.parseDouble(JOptionPane.showInputDialog("Unesi koliæinu:")));
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			}
 		}
 		return 0;
 	}
+
+
+	private static Date unosDatum(String poruka) {
+		SimpleDateFormat df= new SimpleDateFormat(DATE_FORMAT);
+		while (true) {
+			try {
+				df.parse(JOptionPane.showInputDialog(poruka));
+			} catch (Exception e) {
+				e.printStackTrace();			}
+		}
+		
+	}
+
 
 }
