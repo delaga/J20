@@ -114,9 +114,9 @@ public class Insert {
 				
 	//OVDJE SAM ZAPEO
 				
-				izraz.setDate(3, unosDatuma("Unesi datum izdavanja raèuna. Format:"+DATE_FORMAT));
-				izraz.setDate(4, unosDatuma("Unesi datum dospijeæa raèuna. Format:"+DATE_FORMAT));
-				izraz.setDate(5, unosDatuma("Unesi datum isporuke. Format:"+DATE_FORMAT));
+				izraz.setDate(3, new java.sql.Date(unosDatum("Unesi datum izdavanja raèuna. Format:"+DATE_FORMAT).getTime()));
+				izraz.setDate(4, new java.sql.Date(unosDatum("Unesi datum dospijeæa raèuna. Format:"+DATE_FORMAT).getTime()));
+				izraz.setDate(5, new java.sql.Date(unosDatum("Unesi datum isporuke. Format:"+DATE_FORMAT).getTime()));
 				
 				izraz.setInt(6,Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru djelatnika:")));
 				izraz.setString(7, JOptionPane.showInputDialog("Unesi napomenu"));
@@ -144,24 +144,19 @@ public class Insert {
 	}
 
 
-	private static Date unosDatuma(String poruka) {
-		SimpleDateFormat format= new SimpleDateFormat(DATE_FORMAT);
+	private static java.util.Date unosDatum(String poruka) {
+		SimpleDateFormat format=new SimpleDateFormat(DATE_FORMAT);
 		try {
-			java.sql.Date d= new java.sql.Date(format.parse(JOptionPane.showInputDialog(poruka)).getTime());
-			return d;
-		} catch (HeadlessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			return format.parse(JOptionPane.showInputDialog(poruka));
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		
-		
-		
-		
 	}
+
+
+
 
 
 
