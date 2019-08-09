@@ -40,6 +40,12 @@ public class Start {
 			izbornikDelanja();
 			break;
 		case 3:
+			Update.mjenjanjeUTablici();
+			JOptionPane.showMessageDialog(null, "PROMJENJENO");
+			System.out.println();
+			System.out.println(">>>NAKON PROMJENE<<<");
+			Select.ispisiTablicu(Select.tablica);
+			izbornikDelanja();
 
 			break;
 		case 4:
@@ -52,5 +58,33 @@ public class Start {
 		default:
 			break;
 		}
+	}
+
+	public static String odabranaTablica() {
+		String table=null;
+		switch (Select.tablica) {
+		case 1:
+			table = "klijent_kupac";
+			break;
+		case 2:
+			table = "korisnik";
+			break;
+		case 3:
+			table = "podaci_o_obrtu";
+			break;
+		case 4:
+			table = "racun";
+			break;
+		case 5:
+			table = "stavka";
+			break;
+		case 6:
+			table = "usluga_proizvod";
+			break;
+		default:
+			break;
+		}
+		return table;
+		
 	}
 }

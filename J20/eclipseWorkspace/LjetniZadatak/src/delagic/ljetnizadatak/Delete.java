@@ -17,33 +17,13 @@ public class Delete {
 
 		Database spajanje = new Database();
 		spajanje.getVeza();
-		String table = null;
-		switch (Select.tablica) {
-		case 1:
-			table = "klijent_kupac";
-			break;
-		case 2:
-			table = "korisnik";
-			break;
-		case 3:
-			table = "podaci_o_obrtu";
-			break;
-		case 4:
-			table = "racun";
-			break;
-		case 5:
-			table = "stavka";
-			break;
-		case 6:
-			table = "usluga_proizvod";
-			break;
-		default:
-			break;
-		}
+		
+		Start.odabranaTablica();
+		
 		try {
-			izraz = spajanje.veza.prepareStatement("delete from " + table + " where id=?");
+			izraz = spajanje.veza.prepareStatement("delete from " + Start.odabranaTablica() + " where id=?");
 			redak = Integer.parseInt(
-					JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisatu i tabeli " + table));
+					JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisati u tabeli " + Start.odabranaTablica() + ":"));
 			izraz.setInt(1, redak);
 
 			return izraz.executeUpdate();
