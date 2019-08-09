@@ -111,13 +111,9 @@ public class Insert {
 						+ ",napomena,nacin_placanja) values(?,?,?,?,?,?,?,?)");
 				izraz.setString(1, JOptionPane.showInputDialog("Unesi broj raèuna:"));
 				izraz.setInt(2, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru klijenta/kupca")));
-				
-	//OVDJE SAM ZAPEO
-				
 				izraz.setDate(3, new java.sql.Date(unosDatum("Unesi datum izdavanja raèuna. Format:"+DATE_FORMAT).getTime()));
 				izraz.setDate(4, new java.sql.Date(unosDatum("Unesi datum dospijeæa raèuna. Format:"+DATE_FORMAT).getTime()));
 				izraz.setDate(5, new java.sql.Date(unosDatum("Unesi datum isporuke. Format:"+DATE_FORMAT).getTime()));
-				
 				izraz.setInt(6,Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru djelatnika:")));
 				izraz.setString(7, JOptionPane.showInputDialog("Unesi napomenu"));
 				izraz.setString(8, JOptionPane.showInputDialog("Unesi naæin plaæanja:"));
@@ -126,8 +122,9 @@ public class Insert {
 				uspjesno=false;
 				e.printStackTrace();
 			}
-		default:
 			break;
+		
+		
 		case 5:
 			try {
 				izraz=spajanje.veza.prepareStatement("insert into "+table+"(usluga_proizvod_id,racun_id"
@@ -136,10 +133,26 @@ public class Insert {
 				izraz.setInt(2, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru raèuna:")));
 				izraz.setDouble(3, Double.parseDouble(JOptionPane.showInputDialog("Unesi rabat (%):")));
 				izraz.setDouble(4, Double.parseDouble(JOptionPane.showInputDialog("Unesi koliæinu:")));
+				izraz.executeQuery();
 			} catch (SQLException e) {
 				
 				e.printStackTrace();
 			}
+			break;
+		case 6:
+			try {
+				izraz=spajanje.veza.prepareStatement("insert into "+table+"(naziv,opis,jedinica_mjere,cijena) values (?,?,?,?)");
+				izraz.setString(1, JOptionPane.showInputDialog("Unesi naziv usluge ili proizvoda:"));
+				izraz.setString(2, JOptionPane.showInputDialog("Unesi opis usluge ili proizvoda:"));
+				izraz.setString(3, JOptionPane.showInputDialog("Unesi mjernu jedinicu usluge ili proizvoda:"));
+				izraz.setDouble(4, Double.parseDouble(JOptionPane.showInputDialog("Unesi cijenu usluge ili proizvoda:")));
+				izraz.executeQuery();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		default:
+			break;
 		}
 		return 0;
 	}
