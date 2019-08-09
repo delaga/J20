@@ -16,7 +16,6 @@ public class Insert {
 		Database spajanje = new Database();
 		spajanje.getVeza();
 		PreparedStatement izraz;
-		String table = null;
 
 		switch (Select.tablica) {
 		case 1:
@@ -122,7 +121,6 @@ public class Insert {
 						Double.parseDouble(JOptionPane.showInputDialog("Unesi cijenu usluge ili proizvoda:")));
 				izraz.executeQuery();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		default:

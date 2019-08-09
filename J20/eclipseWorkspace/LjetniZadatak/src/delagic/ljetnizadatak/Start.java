@@ -12,8 +12,6 @@ public class Start {
 
 	}
 
-	
-	
 	private static void izbornikDelanja() {
 		System.out.println(">>>>>>IZBORNIK<<<<<<");
 		System.out.println("1. Brišemo?");

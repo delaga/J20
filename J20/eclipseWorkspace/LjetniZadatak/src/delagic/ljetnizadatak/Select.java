@@ -54,7 +54,7 @@ public class Select {
 
 	}
 
-	public static int ispisiTablicu(int key) {
+	public static void ispisiTablicu(int key) {
 		switch (key) {
 		case 1:
 			try {
@@ -160,7 +160,6 @@ public class Select {
 				rs.close();
 				spajanje.veza.close();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			break;
@@ -184,22 +183,21 @@ public class Select {
 
 			break;
 		case 11:
-			String url="https://github.com/delaga/Pausalni_obrt_ZR/blob/master/izdavanje_racuna_za_pausalni_obrt-ERD.png";
-			Desktop desktop=Desktop.getDesktop();
+			String url = "https://github.com/delaga/Pausalni_obrt_ZR/blob/master/izdavanje_racuna_za_pausalni_obrt-ERD.png";
+			Desktop desktop = Desktop.getDesktop();
 			try {
 				desktop.browse(URI.create(url));
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			break;
 		case 12:
-			String url2="https://github.com/delaga/J20/tree/master/J20/eclipseWorkspace/LjetniZadatak";
-			Desktop desktop2=Desktop.getDesktop();
+			String url2 = "https://github.com/delaga/J20/tree/master/J20/eclipseWorkspace/LjetniZadatak";
+			Desktop desktop2 = Desktop.getDesktop();
 			try {
 				desktop2.browse(URI.create(url2));
 			} catch (IOException e) {
-				
+
 				e.printStackTrace();
 			}
 			break;
@@ -211,7 +209,7 @@ public class Select {
 			break;
 
 		}
-		return 0;
+
 	}
 
 }

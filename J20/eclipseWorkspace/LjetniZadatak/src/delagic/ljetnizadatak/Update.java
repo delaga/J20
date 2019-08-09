@@ -1,6 +1,5 @@
 package delagic.ljetnizadatak;
 
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -11,7 +10,6 @@ public class Update {
 		Database spajanje = new Database();
 		spajanje.getVeza();
 		PreparedStatement izraz;
-		String table = null;
 		int redak = Integer.parseInt(JOptionPane.showInputDialog("Broj redka (šifra) kojeg mjenjamo:"));
 
 		switch (Select.tablica) {
@@ -64,7 +62,6 @@ public class Update {
 				izraz.setString(10, JOptionPane.showInputDialog("Unesi novi URL scana loga:"));
 				izraz.executeQuery();
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			break;
@@ -87,7 +84,6 @@ public class Update {
 				izraz.setString(8, JOptionPane.showInputDialog("Unesi naèin plaèanja:"));
 				izraz.executeQuery();
 			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			break;
