@@ -128,7 +128,11 @@ public class Insert {
 		default:
 			break;
 		}
-		// return 0;
+		try {
+			spajanje.veza.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static java.util.Date unosDatum(String poruka) {

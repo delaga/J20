@@ -13,7 +13,7 @@ public class Delete {
 	private static int redak = 0;
 	static boolean uspjesno;
 
-	public static int BrisanjeIzTablice() {
+	public static void BrisanjeIzTablice() {
 
 		Database spajanje = new Database();
 		spajanje.getVeza();
@@ -26,7 +26,7 @@ public class Delete {
 					JOptionPane.showInputDialog("Unesite broj retka kojeg želite obrisati u tabeli " + Start.odabranaTablica() + ":"));
 			izraz.setInt(1, redak);
 
-			return izraz.executeUpdate();
+			izraz.executeUpdate();
 
 		} catch (SQLIntegrityConstraintViolationException e) {
 
@@ -43,7 +43,11 @@ public class Delete {
 			JOptionPane.showMessageDialog(null, "Sorry, redak ima FK");
 		}
 
-		return 0;
+		try {
+			spajanje.veza.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 
 	}
 
