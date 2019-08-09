@@ -1,6 +1,9 @@
 
 package delagic.ljetnizadatak;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -41,6 +44,8 @@ public class Select {
 			e.printStackTrace();
 		}
 		System.out.println("0. Izlaz");
+		System.out.println("11. Otvori ERA u browseru");
+		System.out.println("12. Otvori Git");
 		System.out.println("_____________________");
 		int key = Integer.parseInt(JOptionPane.showInputDialog("Unesi broj"));
 
@@ -178,6 +183,25 @@ public class Select {
 			}
 
 			break;
+		case 11:
+			String url="https://github.com/delaga/Pausalni_obrt_ZR/blob/master/izdavanje_racuna_za_pausalni_obrt-ERD.png";
+			Desktop desktop=Desktop.getDesktop();
+			try {
+				desktop.browse(URI.create(url));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			break;
+		case 12:
+			String url2="https://github.com/delaga/J20/tree/master/J20/eclipseWorkspace/LjetniZadatak";
+			Desktop desktop2=Desktop.getDesktop();
+			try {
+				desktop2.browse(URI.create(url2));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		case 0:
 
 			break;
