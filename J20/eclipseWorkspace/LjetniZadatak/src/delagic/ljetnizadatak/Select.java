@@ -202,6 +202,7 @@ public class Select {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			break;
 		case 0:
 
 			break;
