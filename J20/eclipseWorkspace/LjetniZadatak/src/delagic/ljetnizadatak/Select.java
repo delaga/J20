@@ -61,9 +61,9 @@ public class Select {
 				izraz = spajanje.veza.prepareStatement("SELECT * FROM klijent_kupac");
 				ResultSet rs = izraz.executeQuery();
 				while (rs.next()) {
-					System.out.println(rs.getInt("id") + " " + rs.getString("naziv")+" "+rs.getString("adresa")+
-							" "+rs.getString("post_broj")+" "+rs.getString("grad")+
-							" "+rs.getString("drzava")+" "+rs.getString("oib_jmbg"));
+					System.out.println(rs.getInt("id") + " " + rs.getString("naziv") + " " + rs.getString("adresa")
+							+ " " + rs.getString("post_broj") + " " + rs.getString("grad") + " "
+							+ rs.getString("drzava") + " " + rs.getString("oib_jmbg"));
 				}
 				rs.close();
 				spajanje.veza.close();
@@ -82,9 +82,9 @@ public class Select {
 				izraz = spajanje.veza.prepareStatement("SELECT * FROM korisnik");
 				ResultSet rs = izraz.executeQuery();
 				while (rs.next()) {
-					System.out.println(rs.getInt("id") + " " + rs.getString("ime") + " " + rs.getString("prezime")+
-							" "+rs.getString("email")+" "+rs.getString("lozinka")+" "+rs.getString("mobitel")
-							+" "+rs.getString("potpis_URL"));
+					System.out.println(rs.getInt("id") + " " + rs.getString("ime") + " " + rs.getString("prezime") + " "
+							+ rs.getString("email") + " " + rs.getString("lozinka") + " " + rs.getString("mobitel")
+							+ " " + rs.getString("potpis_URL"));
 				}
 				rs.close();
 				spajanje.veza.close();

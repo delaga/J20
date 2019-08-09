@@ -61,7 +61,7 @@ public class Start {
 	}
 
 	public static String odabranaTablica() {
-		String table=null;
+		String table = null;
 		switch (Select.tablica) {
 		case 1:
 			table = "klijent_kupac";
@@ -85,6 +85,6 @@ public class Start {
 			break;
 		}
 		return table;
-		
+
 	}
 }

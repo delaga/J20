@@ -18,8 +18,6 @@ public class Insert {
 		PreparedStatement izraz;
 		String table = null;
 
-		
-
 		switch (Select.tablica) {
 		case 1:
 			try {
@@ -57,8 +55,9 @@ public class Insert {
 			break;
 		case 3:
 			try {
-				izraz = spajanje.veza.prepareStatement("insert into " + Start.odabranaTablica() + "(naziv,vlasnik,adresa,oib,iban,banka,"
-						+ "djelatnost,email,telefon_mobitel,logo_URL) values(?,?,?,?,?,?,?,?,?,?)");
+				izraz = spajanje.veza.prepareStatement(
+						"insert into " + Start.odabranaTablica() + "(naziv,vlasnik,adresa,oib,iban,banka,"
+								+ "djelatnost,email,telefon_mobitel,logo_URL) values(?,?,?,?,?,?,?,?,?,?)");
 				izraz.setString(1, JOptionPane.showInputDialog("Unesi naziv:"));
 				izraz.setString(2, JOptionPane.showInputDialog("Unesi vlasnika:"));
 				izraz.setString(3, JOptionPane.showInputDialog("Unesi adresu:"));
@@ -77,9 +76,10 @@ public class Insert {
 			break;
 		case 4:
 			try {
-				izraz = spajanje.veza.prepareStatement("insert into " + Start.odabranaTablica() + "(broj_racuna,klijent_kupac_id,"
-						+ "vrijeme_idavanja,datum_dospijeca,datum_isporuke,izdao_korisnik_id"
-						+ ",napomena,nacin_placanja) values(?,?,?,?,?,?,?,?)");
+				izraz = spajanje.veza
+						.prepareStatement("insert into " + Start.odabranaTablica() + "(broj_racuna,klijent_kupac_id,"
+								+ "vrijeme_idavanja,datum_dospijeca,datum_isporuke,izdao_korisnik_id"
+								+ ",napomena,nacin_placanja) values(?,?,?,?,?,?,?,?)");
 				izraz.setString(1, JOptionPane.showInputDialog("Unesi broj raèuna:"));
 				izraz.setInt(2, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru klijenta/kupca")));
 				izraz.setDate(3,
@@ -99,8 +99,8 @@ public class Insert {
 
 		case 5:
 			try {
-				izraz = spajanje.veza.prepareStatement(
-						"insert into " + Start.odabranaTablica() + "(usluga_proizvod_id,racun_id" + ",rabat,kolicina) values(?,?,?,?)");
+				izraz = spajanje.veza.prepareStatement("insert into " + Start.odabranaTablica()
+						+ "(usluga_proizvod_id,racun_id" + ",rabat,kolicina) values(?,?,?,?)");
 				izraz.setInt(1, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru usluge ili proizvoda:")));
 				izraz.setInt(2, Integer.parseInt(JOptionPane.showInputDialog("Unesi šifru raèuna:")));
 				izraz.setDouble(3, Double.parseDouble(JOptionPane.showInputDialog("Unesi rabat (%):")));
@@ -113,8 +113,8 @@ public class Insert {
 			break;
 		case 6:
 			try {
-				izraz = spajanje.veza.prepareStatement(
-						"insert into " + Start.odabranaTablica() + "(naziv,opis,jedinica_mjere,cijena) values (?,?,?,?)");
+				izraz = spajanje.veza.prepareStatement("insert into " + Start.odabranaTablica()
+						+ "(naziv,opis,jedinica_mjere,cijena) values (?,?,?,?)");
 				izraz.setString(1, JOptionPane.showInputDialog("Unesi naziv usluge ili proizvoda:"));
 				izraz.setString(2, JOptionPane.showInputDialog("Unesi opis usluge ili proizvoda:"));
 				izraz.setString(3, JOptionPane.showInputDialog("Unesi mjernu jedinicu usluge ili proizvoda:"));
