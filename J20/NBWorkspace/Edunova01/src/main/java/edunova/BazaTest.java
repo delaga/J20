@@ -30,12 +30,12 @@ public class BazaTest {
     public BazaTest() {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
-            veza = DriverManager.getConnection("jdbc:mariadb://localhost/edunovaj20", "edunova", "edunova");
+            veza = DriverManager.getConnection("jdbc:mariadb://localhost/edunovapp19", "edunova", "edunova");
           
             PreparedStatement izraz = veza.prepareStatement("select * from smjer");
             ResultSet rs = izraz.executeQuery();
             while (rs.next()) {
-                System.out.println(rs.getString("naziv"));
+               System.out.println(rs.getString("naziv"));
             }
             rs.close();
         } catch (ClassNotFoundException e) {
