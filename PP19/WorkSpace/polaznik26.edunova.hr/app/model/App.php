@@ -29,4 +29,9 @@
                 header ("HTTP/1.0 404 Not Found");
             }
         }
+        public static function config($key)
+        {
+            $config=include BP . "app/config.php";
+            return $config[$key];
+        }
     }

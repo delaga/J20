@@ -1,0 +1,24 @@
+<div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+  <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+  <div class="title-bar-title">Izbornik</div>
+</div>
+
+<div class="top-bar" id="responsive-menu">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li ><a href="<?php echo APP::config("url")?>"><?php echo APP::config("nazivApp")?></a></li>
+      <li class="has-submenu">
+        <a href="<?php echo APP::config("url")?>index/onama">o nama</a>
+        
+      </li>
+      <li><a href="<?php echo APP::config("url")?>index/kontakt">kontakt</a></li>
+      
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li>LogOut</li>
+
+    </ul>
+  </div>
+</div>
