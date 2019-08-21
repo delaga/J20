@@ -33,11 +33,11 @@ public class BazaTest {
             veza = DriverManager.getConnection("jdbc:mariadb://localhost/edunovapp19", "edunova", "edunova");
           
             PreparedStatement izraz = veza.prepareStatement("select * from smjer");
-            ResultSet rs = izraz.executeQuery();
-            while (rs.next()) {
-               System.out.println(rs.getString("naziv"));
+            try (ResultSet rs = izraz.executeQuery()) {
+                while (rs.next()) {
+                    System.out.println(rs.getString("naziv"));
+                }
             }
-            rs.close();
         } catch (ClassNotFoundException e) {
             System.out.println(e);
         } catch (SQLException e) {

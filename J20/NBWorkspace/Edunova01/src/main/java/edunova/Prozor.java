@@ -26,37 +26,35 @@ public class Prozor extends javax.swing.JFrame {
      */
     public Prozor() {
         initComponents();
-        BazaTest baza= new BazaTest();
+        BazaTest baza = new BazaTest();
         baza.getVeza();
-        DefaultTableModel tableModel=new DefaultTableModel();
-        String[] colNames = {"Šifra","Naziv","Trajanje","Cijena"};
-        
-        try {
-            PreparedStatement izraz=baza.veza.prepareStatement("select * from smjer");
-            ResultSet rs=izraz.executeQuery();
-            while (Table_Smjer.getRowCount()>0){
-                for(int i=0;i<colNames.length;i++){
+        DefaultTableModel tableModel = new DefaultTableModel();
+        String[] colNames = {"Šifra", "Naziv", "Trajanje", "Cijena"};
 
-                TableColumn tc = Table_Smjer.getColumnModel().getColumn(i);
-                tc.setHeaderValue(colNames[i]);}
-                ((DefaultTableModel) Table_Smjer.getModel()).removeRow(0);     
+        try {
+            PreparedStatement izraz = baza.veza.prepareStatement("select * from smjer");
+            ResultSet rs = izraz.executeQuery();
+            while (Table_Smjer.getRowCount() > 0) {
+                for (int i = 0; i < colNames.length; i++) {
+
+                    TableColumn tc = Table_Smjer.getColumnModel().getColumn(i);
+                    tc.setHeaderValue(colNames[i]);
+                }
+                ((DefaultTableModel) Table_Smjer.getModel()).removeRow(0);
             }
             int columns = rs.getMetaData().getColumnCount();
-            while(rs.next())
-        {  
-            Object[] row = new Object[columns];
-            for (int i = 1; i <= columns; i++)
-            {  
-                row[i - 1] = rs.getObject(i);
+            while (rs.next()) {
+                Object[] row = new Object[columns];
+                for (int i = 1; i <= columns; i++) {
+                    row[i - 1] = rs.getObject(i);
+                }
+                ((DefaultTableModel) Table_Smjer.getModel()).insertRow(rs.getRow() - 1, row);
             }
-            ((DefaultTableModel) Table_Smjer.getModel()).insertRow(rs.getRow()-1,row);
-        }
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(Prozor.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
+
         btnHello.setText("Reci HELLO");
     }
 
@@ -184,7 +182,7 @@ public class Prozor extends javax.swing.JFrame {
     private void btnHelloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelloActionPerformed
         System.out.println("Hello");
         lblPoruka.setText(JOptionPane.showInputDialog("Unesi ime"));
-        
+
     }//GEN-LAST:event_btnHelloActionPerformed
 
     private void btnOcistiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOcistiActionPerformed
@@ -201,13 +199,12 @@ public class Prozor extends javax.swing.JFrame {
 
     private void btnPromjeniBojuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPromjeniBojuMouseExited
         btnPromjeniBoju.setForeground(Color.BLACK);
-        btnPromjeniBoju.setBackground(new Color(255,0,255));
+        btnPromjeniBoju.setBackground(new Color(255, 0, 255));
     }//GEN-LAST:event_btnPromjeniBojuMouseExited
 
     /**
      * @param args the command line arguments
      */
- 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable Table_Smjer;
