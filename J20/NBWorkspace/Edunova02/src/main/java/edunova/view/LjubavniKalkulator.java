@@ -13,12 +13,12 @@ import java.util.Map;
  *
  * @author Polaznik
  */
-public class LjubavniKalkulatot extends javax.swing.JFrame {
+public class LjubavniKalkulator extends javax.swing.JFrame {
 
     /**
      * Creates new form LjubavniKalkulatot
      */
-    public LjubavniKalkulatot() {
+    public LjubavniKalkulator() {
         String ona;
         String on;
         initComponents();
@@ -138,10 +138,45 @@ public class LjubavniKalkulatot extends javax.swing.JFrame {
             }
         Collection <Integer> vrijednosti=mapa.values();
         Integer[] niz=vrijednosti.toArray(new Integer[vrijednosti.size()]);
-        for(int v : niz){
-            System.out.println(v);
+        
+        int prvaGrupaOd=0;
+        int prvaGrupaDo=niz.length/2;
+        int drugaGrupaOd=niz.length/2+1;
+        int drugaGrupaDo=niz.length;
+        int prviZbroj=0;
+        int drugiZbroj=0;
+        int prviZbrojPomocno=0;
+        int drugiZbrojPomocno=0;
+        String krajnjiRezultat;
+        
+        for(int i=prvaGrupaOd;i<prvaGrupaDo;i++){
+            prviZbroj+= niz[i];
         }
+        for(int i=drugaGrupaOd;i<drugaGrupaDo;i++){
+            drugiZbroj+= niz[i];
+        }
+        if(prviZbroj<10) {
+            prviZbrojPomocno=prviZbroj;
+        }else{
+            while(prviZbroj!=0){
+                prviZbrojPomocno=prviZbrojPomocno+prviZbroj % 10;
+                prviZbroj=prviZbroj/10;
+            }
             
+        }
+        if(drugiZbroj<10) {
+            drugiZbrojPomocno=drugiZbroj;
+        }else{
+            while(drugiZbroj!=0){
+                drugiZbrojPomocno=drugiZbrojPomocno+drugiZbroj % 10;
+                drugiZbroj=drugiZbroj/10;
+            }
+            
+        }
+        
+        
+        krajnjiRezultat = Integer.toString(prviZbrojPomocno)+Integer.toString(drugiZbrojPomocno);
+        lblPostotak.setText(krajnjiRezultat+"%");
         
     }//GEN-LAST:event_btnVoleSeActionPerformed
 

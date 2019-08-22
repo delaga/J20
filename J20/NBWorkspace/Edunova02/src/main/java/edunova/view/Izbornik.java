@@ -98,7 +98,7 @@ public class Izbornik extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKalkulatorActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new LjubavniKalkulatot().setVisible(true);
+        new LjubavniKalkulator().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
