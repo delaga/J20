@@ -5,6 +5,10 @@
  */
 package edunova.view;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author Polaznik
@@ -15,6 +19,8 @@ public class LjubavniKalkulatot extends javax.swing.JFrame {
      * Creates new form LjubavniKalkulatot
      */
     public LjubavniKalkulatot() {
+        String ona;
+        String on;
         initComponents();
     }
 
@@ -33,6 +39,7 @@ public class LjubavniKalkulatot extends javax.swing.JFrame {
         lblPostotak = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        btnPonovo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Ljubavni kalkulator");
@@ -57,16 +64,17 @@ public class LjubavniKalkulatot extends javax.swing.JFrame {
 
         jLabel2.setText("ON:");
 
+        btnPonovo.setText("Ponovi");
+        btnPonovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPonovoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblPostotak)
-                    .addComponent(btnVoleSe))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -77,6 +85,13 @@ public class LjubavniKalkulatot extends javax.swing.JFrame {
                     .addComponent(txtOn, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(82, 82, 82))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnVoleSe, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                    .addComponent(btnPonovo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblPostotak, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,9 +106,11 @@ public class LjubavniKalkulatot extends javax.swing.JFrame {
                     .addComponent(txtOna, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addComponent(btnVoleSe)
-                .addGap(30, 30, 30)
+                .addGap(26, 26, 26)
                 .addComponent(lblPostotak)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(btnPonovo)
+                .addContainerGap())
         );
 
         pack();
@@ -105,11 +122,34 @@ public class LjubavniKalkulatot extends javax.swing.JFrame {
     }//GEN-LAST:event_txtOnaActionPerformed
 
     private void btnVoleSeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoleSeActionPerformed
-        String ona=txtOna.getText();
-        String on=txtOn.getText();
+        String  svaSlova= (txtOna.getText()+txtOn.getText()).toLowerCase();
+                     
+        //System.out.println(svaSlova);
         
-        System.out.println(ona.charAt(0));
+        Map<Character,Integer> mapa = new HashMap<>();
+        for (int i = 0; i < svaSlova.length(); i++) {
+            char c = svaSlova.charAt(i);
+            if (mapa.containsKey(c)) {
+                int cnt = mapa.get(c);
+                mapa.put(c, ++cnt);
+            } else {
+                mapa.put(c, 1);
+            }
+            }
+        Collection <Integer> vrijednosti=mapa.values();
+        Integer[] niz=vrijednosti.toArray(new Integer[vrijednosti.size()]);
+        for(int v : niz){
+            System.out.println(v);
+        }
+            
+        
     }//GEN-LAST:event_btnVoleSeActionPerformed
+
+    private void btnPonovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPonovoActionPerformed
+        txtOna.setText("");
+        txtOn.setText("");
+        lblPostotak.setText("00%");
+    }//GEN-LAST:event_btnPonovoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,6 +157,7 @@ public class LjubavniKalkulatot extends javax.swing.JFrame {
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnPonovo;
     private javax.swing.JButton btnVoleSe;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

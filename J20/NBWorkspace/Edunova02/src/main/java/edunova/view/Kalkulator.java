@@ -5,14 +5,17 @@
  */
 package edunova.view;
 
-import java.awt.event.KeyEvent;
 
 /**
  *
  * @author Polaznik
  */
 public class Kalkulator extends javax.swing.JFrame {
-    private int prviBroj;
+    private Double prviBroj;
+    private Double drugiBroj;
+    private String operacija;
+    private Double rezultat;
+    
     /**
      * Creates new form Calculator
      */
@@ -45,6 +48,11 @@ public class Kalkulator extends javax.swing.JFrame {
         btnReset = new javax.swing.JButton();
         btnJednako = new javax.swing.JButton();
         btnResetSve = new javax.swing.JButton();
+        btnMinus = new javax.swing.JButton();
+        btnMnozenje = new javax.swing.JButton();
+        btnDjeljenje = new javax.swing.JButton();
+        btnKvadrat = new javax.swing.JButton();
+        btnKorijen = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Kalkulator");
@@ -152,76 +160,133 @@ public class Kalkulator extends javax.swing.JFrame {
             }
         });
 
+        btnMinus.setText("-");
+        btnMinus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMinusActionPerformed(evt);
+            }
+        });
+
+        btnMnozenje.setText("*");
+        btnMnozenje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMnozenjeActionPerformed(evt);
+            }
+        });
+
+        btnDjeljenje.setText("/");
+        btnDjeljenje.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDjeljenjeActionPerformed(evt);
+            }
+        });
+
+        btnKvadrat.setText("x^y");
+        btnKvadrat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKvadratActionPerformed(evt);
+            }
+        });
+
+        btnKorijen.setText("sqrt(x)");
+        btnKorijen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKorijenActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(lblRezultat, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btn4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btn5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(btn6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnReset)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btn0))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btn1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(btn2)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btn3)
-                                    .addComponent(btnJednako))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblRezultat, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btn4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btn5)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btn6))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btn0)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(btn1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btn2)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btn3)
+                            .addGap(2, 2, 2))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(btn7)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btn8)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(btn9))
-                        .addComponent(btnPlus, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(btnResetSve))
-                .addContainerGap(16, Short.MAX_VALUE))
+                            .addComponent(btnReset)
+                            .addGap(18, 18, 18)
+                            .addComponent(btnResetSve)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(btn7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn9)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnJednako, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnKorijen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                        .addComponent(btnKvadrat, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnPlus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                        .addComponent(btnMinus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnMnozenje, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnDjeljenje, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(lblRezultat, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(btnPlus)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn7)
-                    .addComponent(btn8)
-                    .addComponent(btn9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn4)
-                    .addComponent(btn5)
-                    .addComponent(btn6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn1)
-                    .addComponent(btn2)
-                    .addComponent(btn3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn0)
-                    .addComponent(btnReset)
-                    .addComponent(btnJednako))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnResetSve)
-                .addGap(31, 31, 31))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnPlus)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnMinus)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnMnozenje)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnDjeljenje)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnKvadrat)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnKorijen)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblRezultat, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn7)
+                            .addComponent(btn8)
+                            .addComponent(btn9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn4)
+                            .addComponent(btn5)
+                            .addComponent(btn6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btn1)
+                            .addComponent(btn2)
+                            .addComponent(btn3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn0)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnJednako)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(btnResetSve)
+                                .addComponent(btnReset)))
+                        .addGap(19, 19, 19))))
         );
 
         pack();
@@ -278,19 +343,76 @@ public class Kalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusActionPerformed
-        prviBroj=Integer.parseInt(lblRezultat.getText());
+        prviBroj=Double.parseDouble(lblRezultat.getText());
         lblRezultat.setText("0");
+        operacija="plus";
     }//GEN-LAST:event_btnPlusActionPerformed
 
     private void btnJednakoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJednakoActionPerformed
-        int drugiBroj=Integer.parseInt(lblRezultat.getText());
-        lblRezultat.setText(""+(prviBroj+drugiBroj));
+        drugiBroj = Double.parseDouble(lblRezultat.getText());
+        switch (operacija){
+            case "plus":
+                rezultat=prviBroj+drugiBroj;
+                lblRezultat.setText(String.valueOf(rezultat));
+                break;
+            case "minus":
+                rezultat=prviBroj-drugiBroj;
+                lblRezultat.setText(String.valueOf(rezultat));
+                break;
+            case "puta":
+                rezultat=prviBroj*drugiBroj;
+                lblRezultat.setText(String.valueOf(rezultat));
+                break;
+            case "djeljeno":
+                rezultat=prviBroj/drugiBroj;
+                lblRezultat.setText(""+(rezultat));
+                break;
+            case "power":
+                rezultat=StrictMath.pow(prviBroj, drugiBroj);
+                lblRezultat.setText(""+(rezultat));
+                break;
+            case "korijen":
+                rezultat=Math.sqrt(prviBroj);
+                lblRezultat.setText(""+(rezultat));
+                break;
+        }
+        
+        
     }//GEN-LAST:event_btnJednakoActionPerformed
 
     private void btnResetSveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetSveActionPerformed
-        prviBroj=0;
+        prviBroj=0.0;
         lblRezultat.setText("0");
     }//GEN-LAST:event_btnResetSveActionPerformed
+
+    private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMinusActionPerformed
+        prviBroj=Double.parseDouble(lblRezultat.getText());
+        lblRezultat.setText("0");
+        operacija="minus";
+    }//GEN-LAST:event_btnMinusActionPerformed
+
+    private void btnMnozenjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMnozenjeActionPerformed
+        prviBroj=Double.parseDouble(lblRezultat.getText());
+        lblRezultat.setText("0");
+        operacija="puta";
+    }//GEN-LAST:event_btnMnozenjeActionPerformed
+
+    private void btnDjeljenjeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDjeljenjeActionPerformed
+        prviBroj=Double.parseDouble(lblRezultat.getText());
+        lblRezultat.setText("0");
+        operacija="djeljeno";
+    }//GEN-LAST:event_btnDjeljenjeActionPerformed
+
+    private void btnKvadratActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKvadratActionPerformed
+        prviBroj=Double.parseDouble(lblRezultat.getText());
+        lblRezultat.setText("0");
+        operacija="power";
+    }//GEN-LAST:event_btnKvadratActionPerformed
+
+    private void btnKorijenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKorijenActionPerformed
+        prviBroj=Double.parseDouble(lblRezultat.getText());
+        operacija="korijen";
+    }//GEN-LAST:event_btnKorijenActionPerformed
     
     private void dodajBroj(String broj){
         String unutra=lblRezultat.getText();
@@ -299,6 +421,8 @@ public class Kalkulator extends javax.swing.JFrame {
         }
         lblRezultat.setText((unutra.equals("0") ? "" : unutra) +broj); 
     }
+    
+   
     /**
      * @param args the command line arguments
      */
@@ -315,7 +439,12 @@ public class Kalkulator extends javax.swing.JFrame {
     private javax.swing.JButton btn7;
     private javax.swing.JButton btn8;
     private javax.swing.JButton btn9;
+    private javax.swing.JButton btnDjeljenje;
     private javax.swing.JButton btnJednako;
+    private javax.swing.JButton btnKorijen;
+    private javax.swing.JButton btnKvadrat;
+    private javax.swing.JButton btnMinus;
+    private javax.swing.JButton btnMnozenje;
     private javax.swing.JButton btnPlus;
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnResetSve;
