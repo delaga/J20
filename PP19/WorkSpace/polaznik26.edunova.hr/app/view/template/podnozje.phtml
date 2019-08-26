@@ -1,3 +1,5 @@
-<div class="callout">
-    &copy; Edunova <?php echo date("Y"); ?>
+
+<div class="callout <?php if(App::config("dev")){ echo " alert";}?>">
+    &copy; EdunovaApp v.1 <?php echo date("Y"); ?>
+    <?php if(App::config("dev")){ echo " dev";}?>
 </div>

@@ -22,4 +22,27 @@ class IndexController
 
        $view->render("kontakt");
     }
+
+    public function login()
+    {
+      $view = new View();
+
+       $view->render("login");
+    }
+
+    public function autoriziraj()
+    {
+      $view = new View();
+
+      if(App::param("email")!="" || App::param("password"!="") ){
+            //na bazu
+      }else{
+         $view->render("login",["greska"=>"Obavezan unos"]);
+      }
+      
+
+      
+
+       
+    }
 }
